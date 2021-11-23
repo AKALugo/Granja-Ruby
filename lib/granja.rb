@@ -23,5 +23,12 @@ module Granja
   end
 
   class Datos
+
+    attr_reader :identificacion
+    
+    def initialize (iden = "")
+
+      @identificacion = iden
+    end
   end
 end
