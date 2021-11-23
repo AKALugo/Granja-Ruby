@@ -55,4 +55,6 @@ NameError:
 ```
 Granja
   Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
 ```
