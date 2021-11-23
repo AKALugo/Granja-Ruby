@@ -78,3 +78,12 @@ Failures:
      \# ./spec/granja_spec.rb:13:in `new'
      \# ./spec/granja_spec.rb:13:in `block (3 levels) in <top (required)>'
 ```
+
+## Arreglo: Falta el atributo condicion de vida animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+```
