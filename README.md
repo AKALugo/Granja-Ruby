@@ -111,3 +111,14 @@ Failures:
      \# ./spec/granja_spec.rb:19:in `new'
      \# ./spec/granja_spec.rb:19:in `block (3 levels) in <top (required)>'
 ```
+
+## Arreglo: Falta el atributo cuidado animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+```
+
