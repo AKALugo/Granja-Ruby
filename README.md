@@ -50,3 +50,9 @@ NameError:
 \# ./spec/granja_spec.rb:8:in `block in <top (required)>'
 \# ./spec/granja_spec.rb:3:in `<top (required)>'
 ```
+
+## Arreglo: Falta la clase Funcion
+```
+Granja
+  Versión 0.1.0
+```
