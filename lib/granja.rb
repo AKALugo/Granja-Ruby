@@ -24,12 +24,13 @@ module Granja
 
   class Datos
 
-    attr_reader :identificacion, :nombre
+    attr_reader :identificacion, :nombre, :tipo
     
-    def initialize (iden = "", nom = "")
+    def initialize (iden = "", nom = "", tip = "")
 
       @identificacion = iden
       @nombre = nom
+      @tipo = tip
     end
   end
 end
