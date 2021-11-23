@@ -43,10 +43,10 @@ RSpec.describe Granja do
       expect(Granja::Datos.new("Granja Pepe").identificacion).to eq("Granja Pepe")
     end
     it "Tiene un atributo para el nombre de la granja" do
-      expect(Granja::Datos.new("Granja familia").nombre).to eq("Granja familia")
-      expect(Granja::Datos.new("Granja R").nombre).to eq("Granja R")
-      expect(Granja::Datos.new("Granja Sur").nombre).to eq("Granja Sur")
-      expect(Granja::Datos.new("Granja Pepe").nombre).to eq("Granja Pepe")
+      expect(Granja::Datos.new("","Granja familia").nombre).to eq("Granja familia")
+      expect(Granja::Datos.new("","Granja R").nombre).to eq("Granja R")
+      expect(Granja::Datos.new("","Granja Sur").nombre).to eq("Granja Sur")
+      expect(Granja::Datos.new("","Granja Pepe").nombre).to eq("Granja Pepe")
     end
 
   end
