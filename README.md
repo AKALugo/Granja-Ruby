@@ -122,3 +122,28 @@ Granja
     Tiene un atributo para los cuidados de los animanles
 ```
 
+## Fallo: Falta el atributo reproduccion animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion Tiene un atributo para la reproducción de los animales
+     Failure/Error:
+           def initialize (cond_vid = "", cui_ani = "")
+       
+             @condicion_de_vida_animal = cond_vid
+             @cuidado_animal = cui_ani
+     
+     ArgumentError:
+       wrong number of arguments (given 3, expected 0..2)
+     \# ./lib/granja.rb:13:in `initialize'
+     \# ./spec/granja_spec.rb:25:in `new'
+     \# ./spec/granja_spec.rb:25:in `block (3 levels) in <top (required)>'
+```
