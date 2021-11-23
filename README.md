@@ -272,3 +272,29 @@ Granja
     Tiene una clase para almacenar los dato de la granja
     Tiene un atributo para la identificar la granja
 ```
+
+## Fallo: Falta el atributo nombre
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para el nombre de la granja
+     Failure/Error: expect(Granja::Datos.new("Granja familia").nombre).to eq("Granja familia")
+     
+     NoMethodError:
+       undefined method `nombre' for #<Granja::Datos:0x00005641c12216f0>
+     \# ./spec/granja_spec.rb:46:in `block (3 levels) in <top (required)>'
+```
+
