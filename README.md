@@ -217,3 +217,17 @@ NameError:
 \# ./spec/granja_spec.rb:35:in `block in <top (required)>'
 \# ./spec/granja_spec.rb:3:in `<top (required)>'
 ```
+
+## Arreglo: Falta la clase Datos
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+```
