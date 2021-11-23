@@ -27,5 +27,8 @@ RSpec.describe Granja do
       expect(Granja::Funcion.new("","",200).reproduccion_animal).to eq(200)
       expect(Granja::Funcion.new("","",0.5).reproduccion_animal).to eq(0.5)
     end
+    it ".to_s de la clase Funcion" do
+      expect(Granja::Funcion.new("Muy buena","Malos","10").to_s).to eq("La calidad de vida de los animales es: Muy buena\nLa calidad de los cuidados animales son: Malos\nLa calidad de la reproduccion es: 10")
+    end
   end
 end
