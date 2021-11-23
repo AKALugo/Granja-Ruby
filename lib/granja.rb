@@ -33,5 +33,10 @@ module Granja
       @tipo = tip
       @descripcion = desc
     end
+
+    def to_s
+
+      "La identificacion de la clase es: #{@identificacion}\nEl nombre de la granja es: #{@nombre}\nEl tipo de granja es: #{@tipo}\nLa descripcion de la granja es: #{@descripcion}"
+    end
   end
 end
