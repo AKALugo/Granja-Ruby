@@ -7,5 +7,11 @@ module Granja
   # Your code goes here...
   
   class Funcion
+
+    attr_reader :condicion_de_vida_animal
+    def initialize (cond_vid = "")
+
+      @condicion_de_vida_animal = cond_vid
+    end
   end
 end
