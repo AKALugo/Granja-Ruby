@@ -36,5 +36,11 @@ RSpec.describe Granja do
     it "Tiene una clase para almacenar los dato de la granja" do
       expect(Granja::Datos.new()).not_to eq(nil)
     end
+    it "Tiene un atributo para la identificar la granja" do 
+      expect(Granja::Datos.new(1).identificacion).to eq(1)
+      expect(Granja::Datos.new(100).identificacion).to eq(100)
+      expect(Granja::Datos.new("Granja Sur").identificacion).to eq("Granja Sur")
+      expect(Granja::Datos.new("Granja Pepe").identificacion).to eq("Granja Pepe")
+    end
   end
 end
