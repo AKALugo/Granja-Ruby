@@ -5,4 +5,7 @@ require_relative "granja/version"
 module Granja
   class Error < StandardError; end
   # Your code goes here...
+  
+  class Funcion
+  end
 end
