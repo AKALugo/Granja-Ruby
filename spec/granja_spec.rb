@@ -60,5 +60,8 @@ RSpec.describe Granja do
       expect(Granja::Datos.new("","","","Grande").descripcion).to eq("Grande")
       expect(Granja::Datos.new("","","","Horrible").descripcion).to eq("Horrible")
     end
+    it ".to_s de la clase Datos" do
+      expect(Granja::Datos.new(1,"Granja familia","Vacas","Muy bonita").to_s).to eq("La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: Vacas\nLa descripcion de la granja es: Muy bonita")
+    end
   end
 end
