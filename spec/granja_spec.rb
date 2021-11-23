@@ -6,5 +6,8 @@ RSpec.describe Granja do
   end
 
   describe Granja::Funcion do
+    it "Tiene una clase para almacenar las funcionalidades" do
+      expect(Granja::Funcion.new()).not_to eq(nil)
+    end
   end
 end
