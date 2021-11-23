@@ -362,3 +362,37 @@ Granja
     Tiene un atributo para el nombre de la granja
     Tiene un atributo para el tipo de la granja
 ```
+
+## Fallo: Falta el atributo descripcion
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para la descripci´on de la granja
+     Failure/Error:
+           def initialize (iden = "", nom = "", tip = "")
+       
+             @identificacion = iden
+             @nombre = nom
+             @tipo = tip
+     
+     ArgumentError:
+       wrong number of arguments (given 4, expected 0..3)
+     \# ./lib/granja.rb:29:in `initialize'
+     \# ./spec/granja_spec.rb:58:in `new'
+     \# ./spec/granja_spec.rb:58:in `block (3 levels) in <top (required)>'
+```
