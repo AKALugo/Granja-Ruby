@@ -414,3 +414,40 @@ Granja
     Tiene un atributo para el tipo de la granja
     Tiene un atributo para la descripci´on de la granja
 ```
+
+## Fallo: Falta el metodo to_s
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja
+    .to_s de la clase Datos (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos .to_s de la clase Datos
+     Failure/Error: expect(Granja::Datos.new(1,"Granja familia","Vacas","Muy bonita").to_s).to eq("La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: Vacas\nLa descripcion de la granja es: Muy bonita")
+     
+       expected: "La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: Vacas\nLa descripcion de la granja es: Muy bonita"
+            got: "\#<Granja::Datos:0x0000558ae1c23eb0>"
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1,5 +1,2 @@
+       -La identificacion de la clase es: 1
+       -El nombre de la granja es: Granja familia
+       -El tipo de granja es: Vacas
+       -La descripcion de la granja es: Muy bonita
+       +\#<Granja::Datos:0x0000558ae1c23eb0>
+```
