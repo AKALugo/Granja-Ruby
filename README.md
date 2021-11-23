@@ -158,3 +158,34 @@ Granja
     Tiene un atributo para los cuidados de los animanles
     Tiene un atributo para la reproducción de los animales
 ```
+
+## Fallo: Falta el metodo to_s
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion .to_s de la clase Funcion
+     Failure/Error: expect(Granja::Funcion.new("Muy buena","Malos","10").to_s).to eq("La calidad de vida de los animales es: Muy buena\nLa calidad de los cuidados animales son: Malos\nLa calidad de la reproduccion es: 10")
+     
+       expected: "La calidad de vida de los animales es: Muy buena\nLa calidad de los cuidados animales son: Malos\nLa calidad de la reproduccion es: 10"
+            got: "\#<Granja::Funcion:0x00005576d68e65a0>"
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1,4 +1,2 @@
+       -La calidad de vida de los animales es: Muy buena
+       -La calidad de los cuidados animales son: Malos
+       -La calidad de la reproduccion es: 10
+       +\#<Granja::Funcion:0x00005576d68e65a0>
+       
+     \# ./spec/granja_spec.rb:31:in `block (3 levels) in <top (required)>'
+```
