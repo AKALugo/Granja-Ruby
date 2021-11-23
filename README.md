@@ -201,3 +201,19 @@ Granja
     Tiene un atributo para la reproducción de los animales
     .to_s de la clase Funcion
 ```
+
+## Fallo: Falta la clase Datos
+```
+Failure/Error:
+  describe Granja::Datos do
+    it "Tiene una clase para almacenar los dato de la granja" do
+      expect(Granja::Datos.new()).not_to eq(nil)
+    end
+  end
+
+NameError:
+  uninitialized constant Granja::Datos
+  Did you mean?  Data
+\# ./spec/granja_spec.rb:35:in `block in <top (required)>'
+\# ./spec/granja_spec.rb:3:in `<top (required)>'
+```
