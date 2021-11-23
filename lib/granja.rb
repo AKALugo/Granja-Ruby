@@ -8,12 +8,13 @@ module Granja
   
   class Funcion
 
-    attr_reader :condicion_de_vida_animal, :cuidado_animal
+    attr_reader :condicion_de_vida_animal, :cuidado_animal, :reproduccion_animal
 
-    def initialize (cond_vid = "", cui_ani = "")
+    def initialize (cond_vid = "", cui_ani = "", repr_ani = "")
 
       @condicion_de_vida_animal = cond_vid
       @cuidado_animal = cui_ani
+      @reproduccion_animal = repr_ani
     end
   end
 end
