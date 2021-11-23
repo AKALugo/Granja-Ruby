@@ -36,3 +36,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/alu0101329185/granja.
+
+## Correción de la versión de la gema
