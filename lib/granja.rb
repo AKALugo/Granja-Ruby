@@ -21,4 +21,7 @@ module Granja
       "La calidad de vida de los animales es: #{@condicion_de_vida_animal}\nLa calidad de los cuidados animales son: #{@cuidado_animal}\nLa calidad de la reproduccion es: #{@reproduccion_animal}"
     end
   end
+
+  class Datos
+  end
 end
