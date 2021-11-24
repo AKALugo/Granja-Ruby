@@ -1,42 +1,11 @@
 # frozen_string_literal: true
 
 require_relative "granja/version"
+require "granja/datos"
+require "granja/funcion"
 
 module Granja
   class Error < StandardError; end
   # Your code goes here...
   
-  class Funcion
-
-    attr_reader :condicion_de_vida_animal, :cuidado_animal, :reproduccion_animal
-
-    def initialize (cond_vid = "", cui_ani = "", repr_ani = "")
-
-      @condicion_de_vida_animal = cond_vid
-      @cuidado_animal = cui_ani
-      @reproduccion_animal = repr_ani
-    end
-    def to_s
-
-      "La calidad de vida de los animales es: #{@condicion_de_vida_animal}\nLa calidad de los cuidados animales son: #{@cuidado_animal}\nLa calidad de la reproduccion es: #{@reproduccion_animal}"
-    end
-  end
-
-  class Datos
-
-    attr_reader :identificacion, :nombre, :tipo, :descripcion
-    
-    def initialize (iden = "", nom = "", tip = "", desc = "")
-
-      @identificacion = iden
-      @nombre = nom
-      @tipo = tip
-      @descripcion = desc
-    end
-
-    def to_s
-
-      "La identificacion de la clase es: #{@identificacion}\nEl nombre de la granja es: #{@nombre}\nEl tipo de granja es: #{@tipo}\nLa descripcion de la granja es: #{@descripcion}"
-    end
-  end
 end
