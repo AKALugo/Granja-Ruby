@@ -1,7 +1,7 @@
 
 # Clase que se encarga de guardar los datos de la granja.
 class Datos
-  
+
   # @overload Getters.
   attr_reader :identificacion, :nombre, :tipo, :descripcion
 
