@@ -36,3 +36,437 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/alu0101329185/granja.
+
+## Correción de la versión de la gema
+
+## Fallo: Falta la clase Funcion
+```
+Failure/Error:
+  describe Granja::Funcion do
+  end
+
+NameError:
+  uninitialized constant Granja::Funcion
+\# ./spec/granja_spec.rb:8:in `block in <top (required)>'
+\# ./spec/granja_spec.rb:3:in `<top (required)>'
+```
+
+## Arreglo: Falta la clase Funcion
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+```
+
+## Fallo: Falta el atributo condicion de vida animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion Tiene un atributo para las condiciones de vida de los animales
+     Failure/Error: expect(Granja::Funcion.new("Muy buena").condicion_de_vida_animal).to eq("Muy buena")
+     
+     ArgumentError:
+       wrong number of arguments (given 1, expected 0)
+     \# ./spec/granja_spec.rb:13:in `initialize'
+     \# ./spec/granja_spec.rb:13:in `new'
+     \# ./spec/granja_spec.rb:13:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el atributo condicion de vida animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+```
+
+## Fallo: Falta el atributo cuidado animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion Tiene un atributo para los cuidados de los animanles
+     Failure/Error:
+           def initialize (cond_vid = "")
+       
+             @condicion_de_vida_animal = cond_vid
+     
+     ArgumentError:
+       wrong number of arguments (given 2, expected 0..1)
+     \# ./lib/granja.rb:13:in `initialize'
+     \# ./spec/granja_spec.rb:19:in `new'
+     \# ./spec/granja_spec.rb:19:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el atributo cuidado animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+```
+
+## Fallo: Falta el atributo reproduccion animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion Tiene un atributo para la reproducción de los animales
+     Failure/Error:
+           def initialize (cond_vid = "", cui_ani = "")
+       
+             @condicion_de_vida_animal = cond_vid
+             @cuidado_animal = cui_ani
+     
+     ArgumentError:
+       wrong number of arguments (given 3, expected 0..2)
+     \# ./lib/granja.rb:13:in `initialize'
+     \# ./spec/granja_spec.rb:25:in `new'
+     \# ./spec/granja_spec.rb:25:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el atributo reproduccion animal
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+```
+
+## Fallo: Falta el metodo to_s
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion .to_s de la clase Funcion
+     Failure/Error: expect(Granja::Funcion.new("Muy buena","Malos","10").to_s).to eq("La calidad de vida de los animales es: Muy buena\nLa calidad de los cuidados animales son: Malos\nLa calidad de la reproduccion es: 10")
+     
+       expected: "La calidad de vida de los animales es: Muy buena\nLa calidad de los cuidados animales son: Malos\nLa calidad de la reproduccion es: 10"
+            got: "\#<Granja::Funcion:0x00005576d68e65a0>"
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1,4 +1,2 @@
+       -La calidad de vida de los animales es: Muy buena
+       -La calidad de los cuidados animales son: Malos
+       -La calidad de la reproduccion es: 10
+       +\#<Granja::Funcion:0x00005576d68e65a0>
+       
+     \# ./spec/granja_spec.rb:31:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el metodo to_s
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+```
+
+## Fallo: Falta la clase Datos
+```
+Failure/Error:
+  describe Granja::Datos do
+    it "Tiene una clase para almacenar los dato de la granja" do
+      expect(Granja::Datos.new()).not_to eq(nil)
+    end
+  end
+
+NameError:
+  uninitialized constant Granja::Datos
+  Did you mean?  Data
+\# ./spec/granja_spec.rb:35:in `block in <top (required)>'
+\# ./spec/granja_spec.rb:3:in `<top (required)>'
+```
+
+## Arreglo: Falta la clase Datos
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+```
+
+## Fallo: Falta el atributo identificacion
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para la identificar la granja
+     Failure/Error: expect(Granja::Datos.new(1).identificacion).to eq(1)
+     
+     ArgumentError:
+       wrong number of arguments (given 1, expected 0)
+     \# ./spec/granja_spec.rb:40:in `initialize'
+     \# ./spec/granja_spec.rb:40:in `new'
+     \# ./spec/granja_spec.rb:40:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el atributo identificacion
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+```
+
+## Fallo: Falta el atributo nombre
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para el nombre de la granja
+     Failure/Error: expect(Granja::Datos.new("Granja familia").nombre).to eq("Granja familia")
+     
+     NoMethodError:
+       undefined method `nombre' for #<Granja::Datos:0x00005641c12216f0>
+     \# ./spec/granja_spec.rb:46:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el atributo nombre
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+```
+
+## Fallo: Falta el atributo tipo
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para el tipo de la granja
+     Failure/Error:
+           def initialize (iden = "", nom = "")
+       
+             @identificacion = iden
+             @nombre = nom
+     
+     ArgumentError:
+       wrong number of arguments (given 3, expected 0..2)
+     \# ./lib/granja.rb:29:in `initialize'
+     \# ./spec/granja_spec.rb:52:in `new'
+     \# ./spec/granja_spec.rb:52:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el atributo tipo
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+```
+
+## Fallo: Falta el atributo descripcion
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para la descripci´on de la granja
+     Failure/Error:
+           def initialize (iden = "", nom = "", tip = "")
+       
+             @identificacion = iden
+             @nombre = nom
+             @tipo = tip
+     
+     ArgumentError:
+       wrong number of arguments (given 4, expected 0..3)
+     \# ./lib/granja.rb:29:in `initialize'
+     \# ./spec/granja_spec.rb:58:in `new'
+     \# ./spec/granja_spec.rb:58:in `block (3 levels) in <top (required)>'
+```
+
+## Arreglo: Falta el atributo descripcion
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja
+```
+
+## Fallo: Falta el metodo to_s
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja
+    .to_s de la clase Datos (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos .to_s de la clase Datos
+     Failure/Error: expect(Granja::Datos.new(1,"Granja familia","Vacas","Muy bonita").to_s).to eq("La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: Vacas\nLa descripcion de la granja es: Muy bonita")
+     
+       expected: "La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: Vacas\nLa descripcion de la granja es: Muy bonita"
+            got: "\#<Granja::Datos:0x0000558ae1c23eb0>"
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1,5 +1,2 @@
+       -La identificacion de la clase es: 1
+       -El nombre de la granja es: Granja familia
+       -El tipo de granja es: Vacas
+       -La descripcion de la granja es: Muy bonita
+       +\#<Granja::Datos:0x0000558ae1c23eb0>
+```
+
+### Arreglo: Falta el metodo to_s
+```
+Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja
+    .to_s de la clase Datos
+```
