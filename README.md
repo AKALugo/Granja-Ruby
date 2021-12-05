@@ -610,3 +610,43 @@ Granja
       Tiene una clase para representar aves
 ```
 
+### Fallo: Atributos de la clase Ave
+```
+Failures:
+
+  1) Granja Ave Atributos de la clase Ave Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)
+     Failure/Error: expect(@uno.pico).to eq("corto")
+     
+     NoMethodError:
+       undefined method `pico' for #<Ave:0x0000560f881ae490>
+     # ./spec/ave_spec.rb:17:in `block (4 levels) in <top (required)>'
+
+Failures:
+
+  1) Granja Ave Atributos de la clase Ave Tiene un atributo para el tipo de las patas (anisod´actilas o palmeadas)
+     Failure/Error: expect(@uno.patas).to eq("anisodactilas")
+     
+     NoMethodError:
+       undefined method `patas' for #<Ave:0x000055df2cf0a300>
+     # ./spec/ave_spec.rb:23:in `block (4 levels) in <top (required)>'
+
+Failures:
+
+  1) Granja Ave Atributos de la clase Ave Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
+     Failure/Error: expect(@uno.movilidad).to eq("corredoras")
+     
+     NoMethodError:
+       undefined method `movilidad' for #<Ave:0x00005566ea7c9ab0>
+     # ./spec/ave_spec.rb:29:in `block (4 levels) in <top (required)>'
+```
+
+### Arreglo: Atributos de la clase Ave
+```
+Granja
+  Ave
+    Atributos de la clase Ave
+      Tiene una clase para representar aves
+      Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)
+      Tiene un atributo para el tipo de las patas (anisodactilas o palmeadas)
+      Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
+```
