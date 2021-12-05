@@ -588,3 +588,25 @@ Granja
       No se espera que una instancia de la clase Animal sea una cadena (String)
       No se espera que una instancia de la clase Animal sea un numero (Numeric)
 ```
+
+### Fallo: Falta la clase Ave
+```
+Failures:
+
+  1) Granja Animal Atributos de la clase Ave Tiene una clase para representar aves
+     Failure/Error: expect(Ave.new()).not_to eq(nil)
+     
+     NameError:
+       uninitialized constant Ave
+     # ./spec/ave_spec.rb:6:in `block (4 levels) in <top (required)>'
+
+```
+
+### Arreglo: Falta la clase Ave
+```
+Granja
+  Ave
+    Atributos de la clase Ave
+      Tiene una clase para representar aves
+```
+
