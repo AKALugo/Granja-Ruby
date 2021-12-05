@@ -470,3 +470,23 @@ Granja
     Tiene un atributo para la descripci´on de la granja
     .to_s de la clase Datos
 ```
+### Fallo: Falta la clase Animal
+```
+An error occurred while loading ./spec/animal_spec.rb.
+Failure/Error:
+      describe Animal do
+          
+  
+  
+  
+          context "Atributos de la clase Animal" do
+              it "Tiene una clase para representar animales" do
+                  expect(Animal.new()).not_to eq(nil)
+              end
+          end
+
+NameError:
+  uninitialized constant Animal
+# ./spec/animal_spec.rb:2:in `block in <top (required)>'
+# ./spec/animal_spec.rb:1:in `<top (required)>'
+```
