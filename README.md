@@ -542,6 +542,9 @@ Failures:
       Se obtiene una cadena con la informaci´on del animal correctamente formateada
       Contador de objetos de la clase Animal
 ```
+
+### Arreglo: Atributos de la clase Animal
+```
 Granja
   Animal
     Atributos de la clase Animal
@@ -713,4 +716,50 @@ Granja
       Tiene un atributo con el peso del animal en gramos
       Se obtiene una cadena con la informacion del animal correctamente formateada
       Contador de objetos de la clase Animal
+```
+
+### Error: Comparable clase Animal
+```
+Failures:
+
+  1) Granja Animal Comparable Animal1 < Animal2
+     Failure/Error: expect(@dos < @uno).to eq(true)
+     
+     NoMethodError:
+       undefined method `<' for #<Animal:0x00005632ae26c820>
+     # ./spec/animal_spec.rb:88:in `block (4 levels) in <top (required)>'
+
+  2) Granja Animal Comparable Animal1 <= Animal2
+     Failure/Error: expect(@dos <= @uno).to eq(true)
+     
+     NoMethodError:
+       undefined method `<=' for #<Animal:0x00005632ade29d80>
+       Did you mean?  <=>
+     # ./spec/animal_spec.rb:92:in `block (4 levels) in <top (required)>'
+
+  3) Granja Animal Comparable Animal1 > Animal2
+     Failure/Error: expect(@uno > @dos).to eq(true)
+     
+     NoMethodError:
+       undefined method `>' for #<Animal:0x00005632ae272e00>
+     # ./spec/animal_spec.rb:100:in `block (4 levels) in <top (required)>'
+
+  4) Granja Animal Comparable Animal1 >= Animal2
+     Failure/Error: expect(@uno >= @dos).to eq(true)
+     
+     NoMethodError:
+       undefined method `>=' for #<Animal:0x00005632ae271af0>
+     # ./spec/animal_spec.rb:104:in `block (4 levels) in <top (required)>'
+
+Finished in 0.02045 seconds (files took 0.15778 seconds to load)
+```
+
+### Arreglo: Comparable clase Animal
+```
+    Comparable
+      Animal1 < Animal2
+      Animal1 <= Animal2
+      Animal1 == Animal2
+      Animal1 > Animal2
+      Animal1 >= Animal2
 ```
