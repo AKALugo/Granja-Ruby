@@ -498,3 +498,56 @@ Granja
     Atributos de la clase Animal
       Tiene una clase para representar animales
 ```
+
+### Error: Atributos de la clase Animal
+```
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo para identificar al animal
+     Failure/Error: expect(@uno.identificador).to eq(1)
+     
+     NoMethodError:
+       undefined method `identificador' for #<Animal:0x000055645f3cf000>
+     # ./spec/animal_spec.rb:18:in `block (4 levels) in <top (required)>'
+
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo con la edad del animal en dıas
+     Failure/Error: expect(@uno.edad).to eq(400)
+     
+     NoMethodError:
+       undefined method `edad' for #<Animal:0x000055b154decc80 @identificador=1>
+     # ./spec/animal_spec.rb:24:in `block (4 levels) in <top (required)>'
+
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo con el sexo del animal
+     Failure/Error: expect(@uno.sexo).to eq("macho")
+     
+     NoMethodError:
+       undefined method `sexo' for #<Animal:0x000055dcb4e57770 @identificador=1, @edad=400>
+     # ./spec/animal_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo con el peso del animal en gramos
+     Failure/Error: expect(@uno.peso).to eq(9000)
+     
+     NoMethodError:
+       undefined method `peso' for #<Animal:0x00005630c2b598e0>
+     # ./spec/animal_spec.rb:36:in `block (4 levels) in <top (required)>'
+
+```
+
+### Arreglo: Atributos
+```
+Granja
+  Animal
+    Atributos de la clase Animal
+      Tiene una clase para representar animales
+      Tiene un atributo para identificar al animal
+      Tiene un atributo con la edad del animal en dıas
+      Tiene un atributo con el sexo del animal
+      Tiene un atributo con el peso del animal en gramos
+
+```
