@@ -549,5 +549,32 @@ Granja
       Tiene un atributo con la edad del animal en dıas
       Tiene un atributo con el sexo del animal
       Tiene un atributo con el peso del animal en gramos
+```
 
+### Error: método to_s de la clase Animal
+```
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Se obtiene una cadena con la informaci´on del animal correctamente formateada
+     Failure/Error: expect(@uno.to_s).to eq("El animal 1 de 400 dias de vida es macho con un peso de 9000 gramos")
+     
+       expected: "El animal 1 de 400 dias de vida es macho con un peso de 9000 gramos"
+            got: "#<Animal:0x0000564277198218>"
+     
+       (compared using ==)
+     # ./spec/animal_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+```
+
+### Arreglo: método to_s de la clase Animal
+```
+Granja
+  Animal
+    Atributos de la clase Animal
+      Tiene una clase para representar animales
+      Tiene un atributo para identificar al animal
+      Tiene un atributo con la edad del animal en dıas
+      Tiene un atributo con el sexo del animal
+      Tiene un atributo con el peso del animal en gramos
+      Se obtiene una cadena con la informaci´on del animal correctamente formateada
 ```
