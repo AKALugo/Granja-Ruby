@@ -38,6 +38,12 @@ RSpec.describe Granja do
                 expect(@tres.peso).to eq(5033)
                 expect(@cuatro.peso).to eq(8888)
             end
+            it "Se obtiene una cadena con la informaci´on del animal correctamente formateada" do
+                expect(@uno.to_s).to eq("El animal 1 de 400 dias de vida es macho con un peso de 9000 gramos")
+                expect(@dos.to_s).to eq("El animal 2 de 10 dias de vida es hembra con un peso de 2000 gramos")
+                expect(@tres.to_s).to eq("El animal 3 de 333 dias de vida es macho con un peso de 5033 gramos")
+                expect(@cuatro.to_s).to eq("El animal 50 de 1001 dias de vida es hembra con un peso de 8888 gramos")
+            end
         end
 
 
