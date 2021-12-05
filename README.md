@@ -763,3 +763,65 @@ Finished in 0.02045 seconds (files took 0.15778 seconds to load)
       Animal1 > Animal2
       Animal1 >= Animal2
 ```
+
+### Error: Comparable clase Ave
+```
+Failures:
+
+  1) Granja Animal Comparable Animal1 < Animal2
+     Failure/Error: expect(@dos < @uno).to eq(true)
+Failures:
+
+  1) Granja Ave Comparable Ave1 < Ave2
+     Failure/Error: expect(@dos < @uno).to eq(true)
+     
+       expected: true
+            got: false
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1 +1 @@
+       -true
+       +false
+       
+     # ./spec/ave_spec.rb:85:in `block (4 levels) in <top (required)>'
+
+  2) Granja Ave Comparable Ave1 == Ave2
+     Failure/Error: expect(@uno == @dos).to eq(false)
+     
+       expected: false
+            got: true
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1 +1 @@
+       -false
+       +true
+       
+     # ./spec/ave_spec.rb:93:in `block (4 levels) in <top (required)>'
+
+  3) Granja Ave Comparable Ave1 > Ave2
+     Failure/Error: expect(@uno > @dos).to eq(true)
+     
+       expected: true
+            got: false
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1 +1 @@
+       -true
+       +false
+```
+
+### Arreglo: Comparable clase Ave
+```
+    Comparable
+      Ave1 < Ave2
+      Ave1 <= Ave2
+      Ave1 == Ave2
+      Ave1 > Ave2
+      Ave1 >= Ave2
+```
