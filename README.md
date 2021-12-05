@@ -650,3 +650,29 @@ Granja
       Tiene un atributo para el tipo de las patas (anisodactilas o palmeadas)
       Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
 ```
+
+### Error: Metodo to_s de la clase Ave
+```
+Failures:
+
+  1) Granja Ave Atributos de la clase Ave Se obtiene una cadena con la informaci´on del ave correctamente formateada
+     Failure/Error: expect(@uno.to_s).to eq("La ave tiene un pico corto, unas patas anisodactilas y pertenece al grupo de aves corredoras")
+     
+       expected: "La ave tiene un pico corto, unas patas anisodactilas y pertenece al grupo de aves corredoras"
+            got: "El animal 0 de 0 dias de vida es  con un peso de 0 gramos"
+     
+       (compared using ==)
+     # ./spec/ave_spec.rb:35:in `block (4 levels) in <top (required)>'
+```
+
+### Arreglo: Metodo to_s de la clase Ave
+```
+Granja
+  Ave
+    Atributos de la clase Ave
+      Tiene una clase para representar aves
+      Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)
+      Tiene un atributo para el tipo de las patas (anisodactilas o palmeadas)
+      Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
+      Se obtiene una cadena con la informaci´on del ave correctamente formateada
+```
