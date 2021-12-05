@@ -676,3 +676,14 @@ Granja
       Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
       Se obtiene una cadena con la informaci´on del ave correctamente formateada
 ```
+
+### Herencia clase Ave
+```
+    Herencia de la clase Ave
+      Se espera que una instancia de la clase Ave sea un Ave
+      Se espera que una instancia de la clase Ave sea un Animal
+      Se espera que una instancia de la clase Ave sea un objeto (Object)
+      Se espera que una instancia de la clase Ave sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Ave sea una cadena (String)
+      No se espera que una instancia de la clase Ave sea un n´umero (Numeric)
+```
