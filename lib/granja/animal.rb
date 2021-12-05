@@ -1,6 +1,8 @@
 
 class Animal
 
+    include Comparable
+
     attr_reader :identificador, :edad, :sexo, :peso
 
     def initialize (iden = 0, e = 0, sex = "", pe = 0)
@@ -23,5 +25,9 @@ class Animal
 
     def self.contador
         @@contador
+    end
+
+    def <=> other
+        @peso <=> other.peso
     end
 end
