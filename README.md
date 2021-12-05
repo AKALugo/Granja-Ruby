@@ -490,3 +490,11 @@ NameError:
 # ./spec/animal_spec.rb:2:in `block in <top (required)>'
 # ./spec/animal_spec.rb:1:in `<top (required)>'
 ```
+
+### Arreglo: Falta la clase animal
+```
+Granja
+  Animal
+    Atributos de la clase Animal
+      Tiene una clase para representar animales
+```
