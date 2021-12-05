@@ -578,3 +578,13 @@ Granja
       Tiene un atributo con el peso del animal en gramos
       Se obtiene una cadena con la informaci´on del animal correctamente formateada
 ```
+
+### Herencia clase Animal
+```
+    Herencia de la Animal
+      Se espera que una instancia de la clase Animal sea un Animal
+      Se espera que una instancia de la clase Animal sea un objeto (Object)
+      Se espera que una instancia de la clase Animal sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Animal sea una cadena (String)
+      No se espera que una instancia de la clase Animal sea un numero (Numeric)
+```
