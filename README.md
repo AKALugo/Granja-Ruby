@@ -531,15 +531,16 @@ Failures:
 Failures:
 
   1) Granja Animal Atributos de la clase Animal Tiene un atributo con el peso del animal en gramos
-     Failure/Error: expect(@uno.peso).to eq(9000)
-     
-     NoMethodError:
-       undefined method `peso' for #<Animal:0x00005630c2b598e0>
-     # ./spec/animal_spec.rb:36:in `block (4 levels) in <top (required)>'
-
-```
-
-### Arreglo: Atributos
+     Failure/Error: expect(@uno.peso).to eq(9000)Granja
+  Animal
+    Atributos de la clase Animal
+      Tiene una clase para representar animales
+      Tiene un atributo para identificar al animal
+      Tiene un atributo con la edad del animal en dıas
+      Tiene un atributo con el sexo del animal
+      Tiene un atributo con el peso del animal en gramos
+      Se obtiene una cadena con la informaci´on del animal correctamente formateada
+      Contador de objetos de la clase Animal
 ```
 Granja
   Animal
@@ -686,4 +687,30 @@ Granja
       Se espera que una instancia de la clase Ave sea un objeto basico (BasicObject)
       No se espera que una instancia de la clase Ave sea una cadena (String)
       No se espera que una instancia de la clase Ave sea un n´umero (Numeric)
+```
+
+### Error: Contador de Objetos de la clase Animal
+```
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Contador de objetos de la clase Animal
+     Failure/Error: expect(Animal.contador).to eq(29)
+     
+     NoMethodError:
+       undefined method `contador' for Animal:Class
+     # ./spec/animal_spec.rb:48:in `block (4 levels) in <top (required)>'
+```
+
+### Arreglo: Contador de Objetos de la clase Animal
+```
+Granja
+  Animal
+    Atributos de la clase Animal
+      Tiene una clase para representar animales
+      Tiene un atributo para identificar al animal
+      Tiene un atributo con la edad del animal en dıas
+      Tiene un atributo con el sexo del animal
+      Tiene un atributo con el peso del animal en gramos
+      Se obtiene una cadena con la informacion del animal correctamente formateada
+      Contador de objetos de la clase Animal
 ```
