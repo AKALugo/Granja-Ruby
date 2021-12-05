@@ -8,9 +8,14 @@ class Datos
   # Método que inicializa las variables de instancia.
   def initialize (iden = "", nom = "", tip = "", desc = "")
 
+    if (tip == "avicola" || tip == "ganadera")
+      @tipo = tip
+    else 
+      return nil
+    end
+    
     @identificacion = iden
     @nombre = nom
-    @tipo = tip
     @descripcion = desc
   end
 

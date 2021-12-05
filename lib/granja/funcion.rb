@@ -1,21 +1,23 @@
 # Clase que almacena las funciones de la granja.
-class Funcion
+module Funcion
 
-  # @overload Getters.
-  attr_reader :condicion_de_vida_animal, :cuidado_animal, :reproduccion_animal
+  CONDICIONES_DE_VIDA = "establo"
 
-  # Método que inicializa las variables instancia.
-  def initialize (cond_vid = "", cui_ani = "", repr_ani = "")
+    def self.cuidados (cui)
+    
+      if (cui == 1) 
+        return "Cuidados intensivos"
+      else 
+        return "Cuidados leves"
+      end
+    end
 
-    @condicion_de_vida_animal = cond_vid
-    @cuidado_animal = cui_ani
-    @reproduccion_animal = repr_ani
-  end
+    def self.reproduccion (rep)
 
-  # Método que convierta a String
-  # @return [String]
-  def to_s
-
-    "La calidad de vida de los animales es: #{@condicion_de_vida_animal}\nLa calidad de los cuidados animales son: #{@cuidado_animal}\nLa calidad de la reproduccion es: #{@reproduccion_animal}"
-  end
+      if (rep == 1) 
+        return "Época reproductiva"
+      else 
+        return "Época no reproductiva"
+      end
+    end
 end
