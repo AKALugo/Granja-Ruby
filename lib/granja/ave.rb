@@ -9,4 +9,9 @@ class Ave < Animal
         @patas = pa
         @movilidad = mo
     end
+
+    def to_s
+
+        "La ave tiene un pico #{@pico}, unas patas #{@patas} y pertenece al grupo de aves #{@movilidad}"
+    end
 end

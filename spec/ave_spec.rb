@@ -19,7 +19,7 @@ RSpec.describe Granja do
                 expect(@tres.pico).to eq("ancho y aplanado")
                 expect(@cuatro.pico).to eq("corto")
             end 
-            it "Tiene un atributo para el tipo de las patas (anisod´actilas o palmeadas)" do
+            it "Tiene un atributo para el tipo de las patas (anisodactilas o palmeadas)" do
                 expect(@uno.patas).to eq("anisodactilas")
                 expect(@dos.patas).to eq("palmeadas")
                 expect(@tres.patas).to eq("anisodactilas")
@@ -30,6 +30,12 @@ RSpec.describe Granja do
                 expect(@dos.movilidad).to eq("voladoras")
                 expect(@tres.movilidad).to eq("nadadoras")
                 expect(@cuatro.movilidad).to eq("corredoras")
+            end
+            it "Se obtiene una cadena con la informaci´on del ave correctamente formateada" do
+                expect(@uno.to_s).to eq("La ave tiene un pico corto, unas patas anisodactilas y pertenece al grupo de aves corredoras")
+                expect(@dos.to_s).to eq("La ave tiene un pico grueso y robusto, unas patas palmeadas y pertenece al grupo de aves voladoras")
+                expect(@tres.to_s).to eq("La ave tiene un pico ancho y aplanado, unas patas anisodactilas y pertenece al grupo de aves nadadoras")
+                expect(@cuatro.to_s).to eq("La ave tiene un pico corto, unas patas palmeadas y pertenece al grupo de aves corredoras")
             end
         end
 
