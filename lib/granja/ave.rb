@@ -14,4 +14,9 @@ class Ave < Animal
 
         "La ave tiene un pico #{@pico}, unas patas #{@patas} y pertenece al grupo de aves #{@movilidad}"
     end
+
+    def <=> other
+
+        @edad <=> other.edad
+    end
 end

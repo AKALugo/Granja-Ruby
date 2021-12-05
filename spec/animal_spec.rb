@@ -83,6 +83,7 @@ RSpec.describe Granja do
             end
         end
 
+        
         context "Comparable" do
             it "Animal1 < Animal2" do
                 expect(@dos < @uno).to eq(true)

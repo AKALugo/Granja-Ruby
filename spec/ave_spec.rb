@@ -2,10 +2,10 @@ RSpec.describe Granja do
     describe Ave do
 
         before :each do
-            @uno    = Ave.new("corto", "anisodactilas", "corredoras")
-            @dos    = Ave.new("grueso y robusto", "palmeadas", "voladoras")
-            @tres   = Ave.new("ancho y aplanado", "anisodactilas", "nadadoras")
-            @cuatro = Ave.new("corto", "palmeadas", "corredoras")
+            @uno    = Ave.new("corto", "anisodactilas", "corredoras", 1, 10, "macho", 9000)
+            @dos    = Ave.new("grueso y robusto", "palmeadas", "voladoras", 2, 400, "hembra", 2000)
+            @tres   = Ave.new("ancho y aplanado", "anisodactilas", "nadadoras", 3, 333, "macho", 5033)
+            @cuatro = Ave.new("corto", "palmeadas", "corredoras", 50, 1001, "hembra", 8888)
         end
 
 
@@ -76,6 +76,30 @@ RSpec.describe Granja do
                 expect(@dos.is_a? Numeric).to eq(false)
                 expect(@tres.is_a? Numeric).to eq(false)
                 expect(@cuatro.is_a? Numeric).to eq(false)  
+            end
+        end
+
+
+        context "Comparable" do
+            it "Ave1 < Ave2" do
+                expect(@uno < @dos).to eq(true)
+                expect(@tres < @cuatro).to eq(true)
+            end
+            it "Ave1 <= Ave2" do
+                expect(@uno <= @dos).to eq(true)
+                expect(@tres <= @cuatro).to eq(true)
+            end
+            it "Ave1 == Ave2" do
+                expect(@uno == @dos).to eq(false)
+                expect(@cuatro == @tres).to eq(false)
+            end
+            it "Ave1 > Ave2" do
+                expect(@dos > @uno).to eq(true)
+                expect(@cuatro > @tres).to eq(true)
+            end
+            it "Ave1 >= Ave2" do
+                expect(@dos >= @uno).to eq(true)
+                expect(@cuatro >= @tres).to eq(true)
             end
         end
     end
