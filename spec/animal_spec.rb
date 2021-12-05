@@ -48,7 +48,36 @@ RSpec.describe Granja do
 
 
         context "Herencia de la Animal" do
-
+            it "Se espera que una instancia de la clase Animal sea un Animal" do
+                expect(@uno.is_a? Animal).to eq(true)
+                expect(@dos.is_a? Animal).to eq(true)
+                expect(@tres.is_a? Animal).to eq(true)
+                expect(@cuatro.is_a? Animal).to eq(true)
+            end
+            it "Se espera que una instancia de la clase Animal sea un objeto (Object)" do
+                expect(@uno.is_a? Object).to eq(true)
+                expect(@dos.is_a? Object).to eq(true)
+                expect(@tres.is_a? Object).to eq(true)
+                expect(@cuatro.is_a? Object).to eq(true)
+            end
+            it "Se espera que una instancia de la clase Animal sea un objeto basico (BasicObject)" do
+                expect(@uno.is_a? BasicObject).to eq(true)
+                expect(@dos.is_a? BasicObject).to eq(true)
+                expect(@tres.is_a? BasicObject).to eq(true)
+                expect(@cuatro.is_a? BasicObject).to eq(true)
+            end
+            it "No se espera que una instancia de la clase Animal sea una cadena (String)" do
+                expect(@uno.is_a? String).to eq(false)
+                expect(@dos.is_a? String).to eq(false)
+                expect(@tres.is_a? String).to eq(false)
+                expect(@cuatro.is_a? String).to eq(false)
+            end
+            it "No se espera que una instancia de la clase Animal sea un numero (Numeric)" do
+                expect(@uno.is_a? Numeric).to eq(false)
+                expect(@dos.is_a? Numeric).to eq(false)
+                expect(@tres.is_a? Numeric).to eq(false)
+                expect(@cuatro.is_a? Numeric).to eq(false)                
+            end
         end 
     end
 end
