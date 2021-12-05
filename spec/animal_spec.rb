@@ -44,6 +44,9 @@ RSpec.describe Granja do
                 expect(@tres.to_s).to eq("El animal 3 de 333 dias de vida es macho con un peso de 5033 gramos")
                 expect(@cuatro.to_s).to eq("El animal 50 de 1001 dias de vida es hembra con un peso de 8888 gramos")
             end
+            it "Contador de objetos de la clase Animal" do
+                expect(Animal.contador).to eq(29)
+            end
         end
 
 
