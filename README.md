@@ -825,3 +825,13 @@ Failures:
       Ave1 > Ave2
       Ave1 >= Ave2
 ```
+
+### Herencia clase Datos
+```
+    Herencia de la clase Datos
+      Se espera que una instancia de la clase Datos sea un Datos
+      Se espera que una instancia de la clase Datos sea un objeto (Object)
+      Se espera que una instancia de la clase Datos sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Datos sea una cadena (String)
+      No se espera que una instancia de la clase Datos sea un numero (Numeric)
+```
