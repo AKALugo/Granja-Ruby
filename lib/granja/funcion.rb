@@ -1,8 +1,11 @@
-# Clase que almacena las funciones de la granja.
+
+# Modulo que almacena las funciones de la granja.
 module Funcion
 
+  # Constante.
   CONDICIONES_DE_VIDA = "campo abierto, establo"
 
+    # Método para la función de cuidados
     def self.cuidados (cui)
     
       if (cui == 1) 
@@ -12,6 +15,7 @@ module Funcion
       end
     end
 
+    # Método para la función reproductiva.
     def self.reproduccion (rep)
 
       if (rep == 1) 

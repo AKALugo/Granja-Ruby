@@ -326,16 +326,26 @@
 12
 13
 14
-15</pre>
+15
+16
+17
+18
+19
+20</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/granja/datos.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span> <span class='lparen'>(</span><span class='id identifier rubyid_iden'>iden</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_nom'>nom</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tip'>tip</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_desc'>desc</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_tip'>tip</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>avicola</span><span class='tstring_end'>&quot;</span></span> <span class='op'>||</span> <span class='id identifier rubyid_tip'>tip</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ganadera</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@tipo</span> <span class='op'>=</span> <span class='id identifier rubyid_tip'>tip</span>
+  <span class='kw'>else</span> 
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  
   <span class='ivar'>@identificacion</span> <span class='op'>=</span> <span class='id identifier rubyid_iden'>iden</span>
   <span class='ivar'>@nombre</span> <span class='op'>=</span> <span class='id identifier rubyid_nom'>nom</span>
-  <span class='ivar'>@tipo</span> <span class='op'>=</span> <span class='id identifier rubyid_tip'>tip</span>
   <span class='ivar'>@descripcion</span> <span class='op'>=</span> <span class='id identifier rubyid_desc'>desc</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -566,13 +576,13 @@
       <pre class="lines">
 
 
-19
-20
-21
-22</pre>
+24
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/granja/datos.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/granja/datos.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
 
@@ -588,7 +598,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 24 17:19:48 2021 by
+  Generated on Tue Dec  7 17:16:22 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.2).
 </div>

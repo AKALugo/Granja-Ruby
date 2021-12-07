@@ -94,10 +94,827 @@
 <h2 id="label-Contributing">Contributing</h2>
 
 <p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/alu0101329185/granja">github.com/alu0101329185/granja</a>.</p>
+
+<h2 id="label-Correci-C3-B3n+de+la+versi-C3-B3n+de+la+gema">Correción de la versión de la gema</h2>
+
+<h2 id="label-Fallo-3A+Falta+la+clase+Funcion">Fallo: Falta la clase Funcion</h2>
+
+<pre class="code ruby"><code class="ruby">Failure/Error:
+  describe Granja::Funcion do
+  end
+
+NameError:
+  uninitialized constant Granja::Funcion
+\# ./spec/granja_spec.rb:8:in `block in &lt;top (required)&gt;&#39;
+\# ./spec/granja_spec.rb:3:in `&lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+la+clase+Funcion">Arreglo: Falta la clase Funcion</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+atributo+condicion+de+vida+animal">Fallo: Falta el atributo condicion de vida animal</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion Tiene un atributo para las condiciones de vida de los animales
+     Failure/Error: expect(Granja::Funcion.new(&quot;Muy buena&quot;).condicion_de_vida_animal).to eq(&quot;Muy buena&quot;)
+     
+     ArgumentError:
+       wrong number of arguments (given 1, expected 0)
+     \# ./spec/granja_spec.rb:13:in `initialize&#39;
+     \# ./spec/granja_spec.rb:13:in `new&#39;
+     \# ./spec/granja_spec.rb:13:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+atributo+condicion+de+vida+animal">Arreglo: Falta el atributo condicion de vida animal</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+atributo+cuidado+animal">Fallo: Falta el atributo cuidado animal</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion Tiene un atributo para los cuidados de los animanles
+     Failure/Error:
+           def initialize (cond_vid = &quot;&quot;)
+       
+             @condicion_de_vida_animal = cond_vid
+     
+     ArgumentError:
+       wrong number of arguments (given 2, expected 0..1)
+     \# ./lib/granja.rb:13:in `initialize&#39;
+     \# ./spec/granja_spec.rb:19:in `new&#39;
+     \# ./spec/granja_spec.rb:19:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+atributo+cuidado+animal">Arreglo: Falta el atributo cuidado animal</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+atributo+reproduccion+animal">Fallo: Falta el atributo reproduccion animal</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion Tiene un atributo para la reproducción de los animales
+     Failure/Error:
+           def initialize (cond_vid = &quot;&quot;, cui_ani = &quot;&quot;)
+       
+             @condicion_de_vida_animal = cond_vid
+             @cuidado_animal = cui_ani
+     
+     ArgumentError:
+       wrong number of arguments (given 3, expected 0..2)
+     \# ./lib/granja.rb:13:in `initialize&#39;
+     \# ./spec/granja_spec.rb:25:in `new&#39;
+     \# ./spec/granja_spec.rb:25:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+atributo+reproduccion+animal">Arreglo: Falta el atributo reproduccion animal</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+metodo+to_s">Fallo: Falta el metodo to_s</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Funcion .to_s de la clase Funcion
+     Failure/Error: expect(Granja::Funcion.new(&quot;Muy buena&quot;,&quot;Malos&quot;,&quot;10&quot;).to_s).to eq(&quot;La calidad de vida de los animales es: Muy buena\nLa calidad de los cuidados animales son: Malos\nLa calidad de la reproduccion es: 10&quot;)
+     
+       expected: &quot;La calidad de vida de los animales es: Muy buena\nLa calidad de los cuidados animales son: Malos\nLa calidad de la reproduccion es: 10&quot;
+            got: &quot;\#&lt;Granja::Funcion:0x00005576d68e65a0&gt;&quot;
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1,4 +1,2 @@
+       -La calidad de vida de los animales es: Muy buena
+       -La calidad de los cuidados animales son: Malos
+       -La calidad de la reproduccion es: 10
+       +\#&lt;Granja::Funcion:0x00005576d68e65a0&gt;
+       
+     \# ./spec/granja_spec.rb:31:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+metodo+to_s">Arreglo: Falta el metodo to_s</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+la+clase+Datos">Fallo: Falta la clase Datos</h2>
+
+<pre class="code ruby"><code class="ruby">Failure/Error:
+  describe Granja::Datos do
+    it &quot;Tiene una clase para almacenar los dato de la granja&quot; do
+      expect(Granja::Datos.new()).not_to eq(nil)
+    end
+  end
+
+NameError:
+  uninitialized constant Granja::Datos
+  Did you mean?  Data
+\# ./spec/granja_spec.rb:35:in `block in &lt;top (required)&gt;&#39;
+\# ./spec/granja_spec.rb:3:in `&lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+la+clase+Datos">Arreglo: Falta la clase Datos</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+atributo+identificacion">Fallo: Falta el atributo identificacion</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para la identificar la granja
+     Failure/Error: expect(Granja::Datos.new(1).identificacion).to eq(1)
+     
+     ArgumentError:
+       wrong number of arguments (given 1, expected 0)
+     \# ./spec/granja_spec.rb:40:in `initialize&#39;
+     \# ./spec/granja_spec.rb:40:in `new&#39;
+     \# ./spec/granja_spec.rb:40:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+atributo+identificacion">Arreglo: Falta el atributo identificacion</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+atributo+nombre">Fallo: Falta el atributo nombre</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para el nombre de la granja
+     Failure/Error: expect(Granja::Datos.new(&quot;Granja familia&quot;).nombre).to eq(&quot;Granja familia&quot;)
+     
+     NoMethodError:
+       undefined method `nombre&#39; for #&lt;Granja::Datos:0x00005641c12216f0&gt;
+     \# ./spec/granja_spec.rb:46:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+atributo+nombre">Arreglo: Falta el atributo nombre</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+atributo+tipo">Fallo: Falta el atributo tipo</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para el tipo de la granja
+     Failure/Error:
+           def initialize (iden = &quot;&quot;, nom = &quot;&quot;)
+       
+             @identificacion = iden
+             @nombre = nom
+     
+     ArgumentError:
+       wrong number of arguments (given 3, expected 0..2)
+     \# ./lib/granja.rb:29:in `initialize&#39;
+     \# ./spec/granja_spec.rb:52:in `new&#39;
+     \# ./spec/granja_spec.rb:52:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+atributo+tipo">Arreglo: Falta el atributo tipo</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+atributo+descripcion">Fallo: Falta el atributo descripcion</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos Tiene un atributo para la descripci´on de la granja
+     Failure/Error:
+           def initialize (iden = &quot;&quot;, nom = &quot;&quot;, tip = &quot;&quot;)
+       
+             @identificacion = iden
+             @nombre = nom
+             @tipo = tip
+     
+     ArgumentError:
+       wrong number of arguments (given 4, expected 0..3)
+     \# ./lib/granja.rb:29:in `initialize&#39;
+     \# ./spec/granja_spec.rb:58:in `new&#39;
+     \# ./spec/granja_spec.rb:58:in `block (3 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h2 id="label-Arreglo-3A+Falta+el+atributo+descripcion">Arreglo: Falta el atributo descripcion</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja
+</code></pre>
+
+<h2 id="label-Fallo-3A+Falta+el+metodo+to_s">Fallo: Falta el metodo to_s</h2>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja
+    .to_s de la clase Datos (FAILED - 1)
+
+Failures:
+
+  1) Granja Granja::Datos .to_s de la clase Datos
+     Failure/Error: expect(Granja::Datos.new(1,&quot;Granja familia&quot;,&quot;Vacas&quot;,&quot;Muy bonita&quot;).to_s).to eq(&quot;La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: Vacas\nLa descripcion de la granja es: Muy bonita&quot;)
+     
+       expected: &quot;La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: Vacas\nLa descripcion de la granja es: Muy bonita&quot;
+            got: &quot;\#&lt;Granja::Datos:0x0000558ae1c23eb0&gt;&quot;
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1,5 +1,2 @@
+       -La identificacion de la clase es: 1
+       -El nombre de la granja es: Granja familia
+       -El tipo de granja es: Vacas
+       -La descripcion de la granja es: Muy bonita
+       +\#&lt;Granja::Datos:0x0000558ae1c23eb0&gt;
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Falta+el+metodo+to_s">Arreglo: Falta el metodo to_s</h3>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Versión 0.1.0
+  Granja::Funcion
+    Tiene una clase para almacenar las funcionalidades
+    Tiene un atributo para las condiciones de vida de los animales
+    Tiene un atributo para los cuidados de los animanles
+    Tiene un atributo para la reproducción de los animales
+    .to_s de la clase Funcion
+  Granja::Datos
+    Tiene una clase para almacenar los dato de la granja
+    Tiene un atributo para la identificar la granja
+    Tiene un atributo para el nombre de la granja
+    Tiene un atributo para el tipo de la granja
+    Tiene un atributo para la descripci´on de la granja
+    .to_s de la clase Datos
+</code></pre>
+
+<h3 id="label-Fallo-3A+Falta+la+clase+Animal">Fallo: Falta la clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby">An error occurred while loading ./spec/animal_spec.rb.
+Failure/Error:
+      describe Animal do
+          
+  
+  
+  
+          context &quot;Atributos de la clase Animal&quot; do
+              it &quot;Tiene una clase para representar animales&quot; do
+                  expect(Animal.new()).not_to eq(nil)
+              end
+          end
+
+NameError:
+  uninitialized constant Animal
+# ./spec/animal_spec.rb:2:in `block in &lt;top (required)&gt;&#39;
+# ./spec/animal_spec.rb:1:in `&lt;top (required)&gt;&#39;
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Falta+la+clase+animal">Arreglo: Falta la clase animal</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Granja.html" title="Granja (module)">Granja</a></span></span>
+  <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+    <span class='const'>Atributos</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_clase'>clase</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_representar'>representar</span> <span class='id identifier rubyid_animales'>animales</span>
+</code></pre>
+
+<h3 id="label-Error-3A+Atributos+de+la+clase+Animal">Error: Atributos de la clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo para identificar al animal
+     Failure/Error: expect(@uno.identificador).to eq(1)
+     
+     NoMethodError:
+       undefined method `identificador&#39; for #&lt;Animal:0x000055645f3cf000&gt;
+     # ./spec/animal_spec.rb:18:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo con la edad del animal en dıas
+     Failure/Error: expect(@uno.edad).to eq(400)
+     
+     NoMethodError:
+       undefined method `edad&#39; for #&lt;Animal:0x000055b154decc80 @identificador=1&gt;
+     # ./spec/animal_spec.rb:24:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo con el sexo del animal
+     Failure/Error: expect(@uno.sexo).to eq(&quot;macho&quot;)
+     
+     NoMethodError:
+       undefined method `sexo&#39; for #&lt;Animal:0x000055dcb4e57770 @identificador=1, @edad=400&gt;
+     # ./spec/animal_spec.rb:30:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Failures:
+
+  1) Granja Animal Atributos de la clase Animal Tiene un atributo con el peso del animal en gramos
+     Failure/Error: expect(@uno.peso).to eq(9000)Granja
+  Animal
+    Atributos de la clase Animal
+      Tiene una clase para representar animales
+      Tiene un atributo para identificar al animal
+      Tiene un atributo con la edad del animal en dıas
+      Tiene un atributo con el sexo del animal
+      Tiene un atributo con el peso del animal en gramos
+      Se obtiene una cadena con la informaci´on del animal correctamente formateada
+      Contador de objetos de la clase Animal
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Atributos+de+la+clase+Animal">Arreglo: Atributos de la clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Granja.html" title="Granja (module)">Granja</a></span></span>
+  <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+    <span class='const'>Atributos</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_clase'>clase</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_representar'>representar</span> <span class='id identifier rubyid_animales'>animales</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_identificar'>identificar</span> <span class='id identifier rubyid_al'>al</span> <span class='id identifier rubyid_animal'>animal</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_edad'>edad</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_en'>en</span> <span class='id identifier rubyid_dıas'>dıas</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_el'>el</span> <span class='id identifier rubyid_sexo'>sexo</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_el'>el</span> <span class='id identifier rubyid_peso'>peso</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_en'>en</span> <span class='id identifier rubyid_gramos'>gramos</span>
+</code></pre>
+
+<h3 id="label-Error-3A+m-C3-A9todo+to_s+de+la+clase+Animal">Error: método to_s de la clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Animal Atributos de la clase Animal Se obtiene una cadena con la informaci´on del animal correctamente formateada
+     Failure/Error: expect(@uno.to_s).to eq(&quot;El animal 1 de 400 dias de vida es macho con un peso de 9000 gramos&quot;)
+     
+       expected: &quot;El animal 1 de 400 dias de vida es macho con un peso de 9000 gramos&quot;
+            got: &quot;#&lt;Animal:0x0000564277198218&gt;&quot;
+     
+       (compared using ==)
+     # ./spec/animal_spec.rb:42:in `block (4 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h3 id="label-Arreglo-3A+m-C3-A9todo+to_s+de+la+clase+Animal">Arreglo: método to_s de la clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Granja.html" title="Granja (module)">Granja</a></span></span>
+  <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+    <span class='const'>Atributos</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_clase'>clase</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_representar'>representar</span> <span class='id identifier rubyid_animales'>animales</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_identificar'>identificar</span> <span class='id identifier rubyid_al'>al</span> <span class='id identifier rubyid_animal'>animal</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_edad'>edad</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_en'>en</span> <span class='id identifier rubyid_dıas'>dıas</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_el'>el</span> <span class='id identifier rubyid_sexo'>sexo</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_el'>el</span> <span class='id identifier rubyid_peso'>peso</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_en'>en</span> <span class='id identifier rubyid_gramos'>gramos</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_obtiene'>obtiene</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_cadena'>cadena</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_informaci´on'>informaci´on</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_correctamente'>correctamente</span> <span class='id identifier rubyid_formateada'>formateada</span>
+</code></pre>
+
+<h3 id="label-Herencia+clase+Animal">Herencia clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Herencia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='lparen'>(</span><span class='const'>Object</span><span class='rparen'>)</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='id identifier rubyid_basico'>basico</span> <span class='lparen'>(</span><span class='const'>BasicObject</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_cadena'>cadena</span> <span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_numero'>numero</span> <span class='lparen'>(</span><span class='const'>Numeric</span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-Fallo-3A+Falta+la+clase+Ave">Fallo: Falta la clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Animal Atributos de la clase Ave Tiene una clase para representar aves
+     Failure/Error: expect(Ave.new()).not_to eq(nil)
+     
+     NameError:
+       uninitialized constant Ave
+     # ./spec/ave_spec.rb:6:in `block (4 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Falta+la+clase+Ave">Arreglo: Falta la clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Granja.html" title="Granja (module)">Granja</a></span></span>
+  <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span>
+    <span class='const'>Atributos</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_clase'>clase</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_representar'>representar</span> <span class='id identifier rubyid_aves'>aves</span>
+</code></pre>
+
+<h3 id="label-Fallo-3A+Atributos+de+la+clase+Ave">Fallo: Atributos de la clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Ave Atributos de la clase Ave Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)
+     Failure/Error: expect(@uno.pico).to eq(&quot;corto&quot;)
+     
+     NoMethodError:
+       undefined method `pico&#39; for #&lt;Ave:0x0000560f881ae490&gt;
+     # ./spec/ave_spec.rb:17:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Failures:
+
+  1) Granja Ave Atributos de la clase Ave Tiene un atributo para el tipo de las patas (anisod´actilas o palmeadas)
+     Failure/Error: expect(@uno.patas).to eq(&quot;anisodactilas&quot;)
+     
+     NoMethodError:
+       undefined method `patas&#39; for #&lt;Ave:0x000055df2cf0a300&gt;
+     # ./spec/ave_spec.rb:23:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Failures:
+
+  1) Granja Ave Atributos de la clase Ave Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
+     Failure/Error: expect(@uno.movilidad).to eq(&quot;corredoras&quot;)
+     
+     NoMethodError:
+       undefined method `movilidad&#39; for #&lt;Ave:0x00005566ea7c9ab0&gt;
+     # ./spec/ave_spec.rb:29:in `block (4 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Atributos+de+la+clase+Ave">Arreglo: Atributos de la clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Ave
+    Atributos de la clase Ave
+      Tiene una clase para representar aves
+      Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)
+      Tiene un atributo para el tipo de las patas (anisodactilas o palmeadas)
+      Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
+</code></pre>
+
+<h3 id="label-Error-3A+Metodo+to_s+de+la+clase+Ave">Error: Metodo to_s de la clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Ave Atributos de la clase Ave Se obtiene una cadena con la informaci´on del ave correctamente formateada
+     Failure/Error: expect(@uno.to_s).to eq(&quot;La ave tiene un pico corto, unas patas anisodactilas y pertenece al grupo de aves corredoras&quot;)
+     
+       expected: &quot;La ave tiene un pico corto, unas patas anisodactilas y pertenece al grupo de aves corredoras&quot;
+            got: &quot;El animal 0 de 0 dias de vida es  con un peso de 0 gramos&quot;
+     
+       (compared using ==)
+     # ./spec/ave_spec.rb:35:in `block (4 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Metodo+to_s+de+la+clase+Ave">Arreglo: Metodo to_s de la clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Ave
+    Atributos de la clase Ave
+      Tiene una clase para representar aves
+      Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)
+      Tiene un atributo para el tipo de las patas (anisodactilas o palmeadas)
+      Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)
+      Se obtiene una cadena con la informaci´on del ave correctamente formateada
+</code></pre>
+
+<h3 id="label-Herencia+clase+Ave">Herencia clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Herencia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='lparen'>(</span><span class='const'>Object</span><span class='rparen'>)</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='id identifier rubyid_basico'>basico</span> <span class='lparen'>(</span><span class='const'>BasicObject</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_cadena'>cadena</span> <span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Ave.html" title="Ave (class)">Ave</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_n´umero'>n´umero</span> <span class='lparen'>(</span><span class='const'>Numeric</span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-Error-3A+Contador+de+Objetos+de+la+clase+Animal">Error: Contador de Objetos de la clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Animal Atributos de la clase Animal Contador de objetos de la clase Animal
+     Failure/Error: expect(Animal.contador).to eq(29)
+     
+     NoMethodError:
+       undefined method `contador&#39; for Animal:Class
+     # ./spec/animal_spec.rb:48:in `block (4 levels) in &lt;top (required)&gt;&#39;
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Contador+de+Objetos+de+la+clase+Animal">Arreglo: Contador de Objetos de la clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Granja.html" title="Granja (module)">Granja</a></span></span>
+  <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+    <span class='const'>Atributos</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_clase'>clase</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_representar'>representar</span> <span class='id identifier rubyid_animales'>animales</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_identificar'>identificar</span> <span class='id identifier rubyid_al'>al</span> <span class='id identifier rubyid_animal'>animal</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_edad'>edad</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_en'>en</span> <span class='id identifier rubyid_dıas'>dıas</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_el'>el</span> <span class='id identifier rubyid_sexo'>sexo</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span>
+      <span class='const'>Tiene</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_atributo'>atributo</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_el'>el</span> <span class='id identifier rubyid_peso'>peso</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_en'>en</span> <span class='id identifier rubyid_gramos'>gramos</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_obtiene'>obtiene</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_cadena'>cadena</span> <span class='id identifier rubyid_con'>con</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_informacion'>informacion</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_animal'>animal</span> <span class='id identifier rubyid_correctamente'>correctamente</span> <span class='id identifier rubyid_formateada'>formateada</span>
+      <span class='const'>Contador</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_objetos'>objetos</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Animal.html" title="Animal (class)">Animal</a></span></span>
+</code></pre>
+
+<h3 id="label-Error-3A+Comparable+clase+Animal">Error: Comparable clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Animal Comparable Animal1 &lt; Animal2
+     Failure/Error: expect(@dos &lt; @uno).to eq(true)
+     
+     NoMethodError:
+       undefined method `&lt;&#39; for #&lt;Animal:0x00005632ae26c820&gt;
+     # ./spec/animal_spec.rb:88:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  2) Granja Animal Comparable Animal1 &lt;= Animal2
+     Failure/Error: expect(@dos &lt;= @uno).to eq(true)
+     
+     NoMethodError:
+       undefined method `&lt;=&#39; for #&lt;Animal:0x00005632ade29d80&gt;
+       Did you mean?  &lt;=&gt;
+     # ./spec/animal_spec.rb:92:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  3) Granja Animal Comparable Animal1 &gt; Animal2
+     Failure/Error: expect(@uno &gt; @dos).to eq(true)
+     
+     NoMethodError:
+       undefined method `&gt;&#39; for #&lt;Animal:0x00005632ae272e00&gt;
+     # ./spec/animal_spec.rb:100:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  4) Granja Animal Comparable Animal1 &gt;= Animal2
+     Failure/Error: expect(@uno &gt;= @dos).to eq(true)
+     
+     NoMethodError:
+       undefined method `&gt;=&#39; for #&lt;Animal:0x00005632ae271af0&gt;
+     # ./spec/animal_spec.rb:104:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Finished in 0.02045 seconds (files took 0.15778 seconds to load)
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Comparable+clase+Animal">Arreglo: Comparable clase Animal</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Comparable</span>
+      <span class='const'>Animal1</span> <span class='op'>&lt;</span> <span class='const'>Animal2</span>
+      <span class='const'>Animal1</span> <span class='op'>&lt;=</span> <span class='const'>Animal2</span>
+      <span class='const'>Animal1</span> <span class='op'>==</span> <span class='const'>Animal2</span>
+      <span class='const'>Animal1</span> <span class='op'>&gt;</span> <span class='const'>Animal2</span>
+      <span class='const'>Animal1</span> <span class='op'>&gt;=</span> <span class='const'>Animal2</span>
+</code></pre>
+
+<h3 id="label-Error-3A+Comparable+clase+Ave">Error: Comparable clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Animal Comparable Animal1 &lt; Animal2
+     Failure/Error: expect(@dos &lt; @uno).to eq(true)
+Failures:
+
+  1) Granja Ave Comparable Ave1 &lt; Ave2
+     Failure/Error: expect(@dos &lt; @uno).to eq(true)
+     
+       expected: true
+            got: false
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1 +1 @@
+       -true
+       +false
+       
+     # ./spec/ave_spec.rb:85:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  2) Granja Ave Comparable Ave1 == Ave2
+     Failure/Error: expect(@uno == @dos).to eq(false)
+     
+       expected: false
+            got: true
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1 +1 @@
+       -false
+       +true
+       
+     # ./spec/ave_spec.rb:93:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  3) Granja Ave Comparable Ave1 &gt; Ave2
+     Failure/Error: expect(@uno &gt; @dos).to eq(true)
+     
+       expected: true
+            got: false
+     
+       (compared using ==)
+     
+       Diff:
+       @@ -1 +1 @@
+       -true
+       +false
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Comparable+clase+Ave">Arreglo: Comparable clase Ave</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Comparable</span>
+      <span class='const'>Ave1</span> <span class='op'>&lt;</span> <span class='const'>Ave2</span>
+      <span class='const'>Ave1</span> <span class='op'>&lt;=</span> <span class='const'>Ave2</span>
+      <span class='const'>Ave1</span> <span class='op'>==</span> <span class='const'>Ave2</span>
+      <span class='const'>Ave1</span> <span class='op'>&gt;</span> <span class='const'>Ave2</span>
+      <span class='const'>Ave1</span> <span class='op'>&gt;=</span> <span class='const'>Ave2</span>
+</code></pre>
+
+<h3 id="label-Herencia+clase+Datos">Herencia clase Datos</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Herencia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Datos.html" title="Datos (class)">Datos</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Datos.html" title="Datos (class)">Datos</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='const'><span class='object_link'><a href="Datos.html" title="Datos (class)">Datos</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Datos.html" title="Datos (class)">Datos</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='lparen'>(</span><span class='const'>Object</span><span class='rparen'>)</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Datos.html" title="Datos (class)">Datos</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='id identifier rubyid_basico'>basico</span> <span class='lparen'>(</span><span class='const'>BasicObject</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Datos.html" title="Datos (class)">Datos</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_cadena'>cadena</span> <span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'><span class='object_link'><a href="Datos.html" title="Datos (class)">Datos</a></span></span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_numero'>numero</span> <span class='lparen'>(</span><span class='const'>Numeric</span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-Arreglo+Funcion">Arreglo Funcion</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Granja.html" title="Granja (module)">Granja</a></span></span>
+  <span class='const'><span class='object_link'><a href="Funcion.html" title="Funcion (module)">Funcion</a></span></span>
+    <span class='const'>Componentes</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_modulo'>modulo</span> <span class='const'><span class='object_link'><a href="Funcion.html" title="Funcion (module)">Funcion</a></span></span>
+      <span class='const'>Existe</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_modulo'>modulo</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_almacenar'>almacenar</span> <span class='id identifier rubyid_las'>las</span> <span class='id identifier rubyid_funcionalidades'>funcionalidades</span>
+      <span class='const'>Existe</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_constante'>constante</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_representar'>representar</span> <span class='id identifier rubyid_las'>las</span> <span class='id identifier rubyid_condiciones'>condiciones</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_vida'>vida</span> <span class='lparen'>(</span><span class='id identifier rubyid_campo'>campo</span> <span class='id identifier rubyid_abierto'>abierto</span><span class='comma'>,</span> <span class='id identifier rubyid_establo'>establo</span><span class='rparen'>)</span>
+      <span class='const'>Existe</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_procedimiento'>procedimiento</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_establecer'>establecer</span> <span class='id identifier rubyid_los'>los</span> <span class='id identifier rubyid_cuidados'>cuidados</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_los'>los</span> <span class='id identifier rubyid_animales'>animales</span>
+      <span class='const'>Existe</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_procedimiento'>procedimiento</span> <span class='id identifier rubyid_para'>para</span> <span class='id identifier rubyid_establecer'>establecer</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_reproduccion'>reproduccion</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_los'>los</span> <span class='id identifier rubyid_animales'>animales</span>
+    <span class='const'>Herencia</span> <span class='id identifier rubyid_del'>del</span> <span class='id identifier rubyid_modulo'>modulo</span> <span class='const'><span class='object_link'><a href="Funcion.html" title="Funcion (module)">Funcion</a></span></span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Module</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='lparen'>(</span><span class='const'>Object</span><span class='rparen'>)</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='id identifier rubyid_basico'>basico</span> <span class='lparen'>(</span><span class='const'>BasicObject</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_representa'>representa</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_cadena'>cadena</span> <span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_representa'>representa</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_numero'>numero</span> <span class='lparen'>(</span><span class='const'>Numeric</span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-Cambio+en+las+expectativas+de+la+jerarqu-C3-ADa.">Cambio en las expectativas de la jerarquía.</h3>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Nov 24 17:19:48 2021 by
+  Generated on Tue Dec  7 17:16:22 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.2).
 </div>

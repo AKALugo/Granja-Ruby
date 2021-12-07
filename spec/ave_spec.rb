@@ -1,6 +1,6 @@
 RSpec.describe Granja do
     describe Ave do
-
+    
         before :each do
             @uno    = Ave.new("corto", "anisodactilas", "corredoras", 1, 10, "macho", 9000)
             @dos    = Ave.new("grueso y robusto", "palmeadas", "voladoras", 2, 400, "hembra", 2000)
