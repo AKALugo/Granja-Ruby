@@ -1,7 +1,7 @@
 # Clase que almacena las funciones de la granja.
 module Funcion
 
-  CONDICIONES_DE_VIDA = "establo"
+  CONDICIONES_DE_VIDA = "campo abierto, establo"
 
     def self.cuidados (cui)
     
