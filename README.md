@@ -1019,3 +1019,32 @@ Granja
       Prueba detect
       Prueba find_all
 ```
+
+### Error: Funcion clase Avicola
+```
+Failures:
+
+  1) Granja Avicola Funciones Avicolas Gestion de puesta de huevos
+     Failure/Error: expect(@uno.puesta_huevos).to eq(:campo_abierto)
+     
+     NoMethodError:
+       undefined method `puesta_huevos' for #<Avicola:0x00005599040eca70>
+     # ./spec/avicola_spec.rb:149:in `block (4 levels) in <top (required)>'
+
+  2) Granja Avicola Funciones Avicolas Uso de antibióticos
+     Failure/Error: expect(@uno.antibioticos).to eq("Se necesitan 100 antibióticos de forma semanal en la granja.")
+     
+     NoMethodError:
+       undefined method `antibioticos' for #<Avicola:0x00005599040f7b28>
+     # ./spec/avicola_spec.rb:155:in `block (4 levels) in <top (required)>'
+
+  3) Granja Avicola Funciones Avicolas Población reproductora
+     Failure/Error: expect(@uno.poblacion_reproduccion).to eq("Hay 3 animales preparados para la reproducción.")
+     
+     NoMethodError:
+       undefined method `poblacion_reproduccion' for #<Avicola:0x00005599040f66b0>
+     # ./spec/avicola_spec.rb:166:in `block (4 levels) in <top (required)>'
+
+Finished in 0.0283 seconds (files took 0.16139 seconds to load)
+81 examples, 3 failures
+```
