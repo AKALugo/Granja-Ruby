@@ -5,6 +5,7 @@ require "granja/datos"
 require "granja/animal"
 require "granja/ave"
 require "granja/funcion"
+require "granja/avicola"
 
 module Granja
   

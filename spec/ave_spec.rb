@@ -71,7 +71,7 @@ RSpec.describe Granja do
                 expect(@tres.is_a? String).to eq(false)
                 expect(@cuatro.is_a? String).to eq(false)
             end
-            it "No se espera que una instancia de la clase Ave sea un n´umero (Numeric)" do
+            it "No se espera que una instancia de la clase Ave sea un numero (Numeric)" do
                 expect(@uno).not_to be_a_kind_of(Numeric)
                 expect(@dos).not_to be_a_kind_of(Numeric)
                 expect(@tres.is_a? Numeric).to eq(false)

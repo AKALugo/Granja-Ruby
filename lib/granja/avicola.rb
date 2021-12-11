@@ -1,0 +1,4 @@
+
+class Avicola < Datos
+
+end
