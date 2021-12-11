@@ -938,3 +938,5 @@ Granja
       No se espera que una instancia de la clase Avicola sea un Animal
       No se espera que una instancia de la clase Avicola sea un Ave
 ```
+
+### Método to_s de la clase Avicola
