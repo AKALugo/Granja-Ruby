@@ -867,3 +867,53 @@ Granja
       No se espera que una instancia de la clase Avicola sea un Animal
       No se espera que una instancia de la clase Avicola sea un Ave
 ```
+
+### Error: Atributos de la clase Avicola
+```
+Failures:
+
+  1) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)
+     Failure/Error: expect(@uno.ave).to eq(:gansos)
+     
+     NoMethodError:
+       undefined method `ave' for #<Avicola:0x000055b4b59fa280>
+     # ./spec/avicola_spec.rb:58:in `block (4 levels) in <top (required)>'
+
+  2) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el destino de los animales (huevos, sacrificio)
+     Failure/Error: expect(@uno.destino).to eq(:huevos)
+     
+     NoMethodError:
+       undefined method `destino' for #<Avicola:0x000055b4b59f8d18>
+     # ./spec/avicola_spec.rb:64:in `block (4 levels) in <top (required)>'
+
+  3) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el numero de aves de la granja
+     Failure/Error: expect(@uno.numero).to eq(50)
+     
+     NoMethodError:
+       undefined method `numero' for #<Avicola:0x000055b4b5476840>
+     # ./spec/avicola_spec.rb:70:in `block (4 levels) in <top (required)>'
+
+  4) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el precio unitario de los animales
+     Failure/Error: expect(@uno.precio_unidad).to eq(10,50)
+     
+     NoMethodError:
+       undefined method `precio_unidad' for #<Avicola:0x000055b4b5474658>
+     # ./spec/avicola_spec.rb:76:in `block (4 levels) in <top (required)>'
+
+  5) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el precio de venta unitario de los animales
+     Failure/Error: expect(@uno.precio_venta_u).to eq(42)
+     
+     NoMethodError:
+       undefined method `precio_venta_u' for #<Avicola:0x000055b4b59fee70>
+     # ./spec/avicola_spec.rb:82:in `block (4 levels) in <top (required)>'
+
+  6) Granja Avicola Atributos de la clase Avicola Tiene un atributo para almacenar las aves de la granja
+     Failure/Error: expect(@uno.almacen_animal).not_to eq(nil)
+     
+     NoMethodError:
+       undefined method `almacen_animal' for #<Avicola:0x000055b4b59fd980>
+     # ./spec/avicola_spec.rb:88:in `block (4 levels) in <top (required)>'
+
+Finished in 0.02071 seconds (files took 0.17713 seconds to load)
+69 examples, 6 failures
+```
