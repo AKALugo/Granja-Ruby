@@ -854,3 +854,16 @@ Granja
 ```
 
 ### Cambio en las expectativas de la jerarquía.
+
+### Herencia de la clase Avicola
+```
+Granja
+  Avicola
+    Herencia de la clase Avicola
+      Se espera que una instancia de la clase Avicola sea una granja Avicola
+      Se espera que una instancia de la clase Avicola sea un Dato
+      Se espera que una instancia de la clase Avicola sea un objeto (Object)
+      Se espera que una instancia de la clase Avicola sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Avicola sea un Animal
+      No se espera que una instancia de la clase Avicola sea un Ave
+```
