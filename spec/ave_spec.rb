@@ -11,7 +11,10 @@ RSpec.describe Granja do
 
         context "Atributos de la clase Ave" do
             it "Tiene una clase para representar aves" do
-                expect(Ave.new()).not_to be(nil)
+                expect(@uno).not_to be(nil)
+                expect(@dos).not_to be(nil)
+                expect(@tres).not_to be(nil)
+                expect(@cuatro).not_to be(nil)
             end
             it "Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)" do
                 expect(@uno.pico).to eq(:corto)
