@@ -8,7 +8,7 @@ class Animal
     attr_reader :identificador, :edad, :sexo, :peso
 
     # Método que inicializa las variables de instancia y de clase.
-    def initialize (iden = 0, e = 0, sex = "", pe = 0)
+    def initialize (iden = 0, e = 0, sex = nil, pe = 0)
 
         if defined?(@@contador)
             @@contador += 1

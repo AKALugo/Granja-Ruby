@@ -10,19 +10,19 @@ class Ave < Animal
     # Método que inicializa las variables de instancia.
     def initialize (pi = "", pa = "", mo = "", iden = 0, e = 0, sex = "", pe = 0)
     
-        if (pi == "corto" || pi == "grueso y robusto" || pi == "ancho y aplanado")
+        if (pi == :corto || pi == :grueso_y_robusto || pi == :ancho_y_aplanado)
             @pico = pi
         else
             return nil
         end
 
-        if (pa == "anisodactilas" || pa == "palmeadas")
+        if (pa == :anisodactilas || pa == :palmeadas)
             @patas = pa
         else 
             return nil
         end
 
-        if (mo == "corredoras" || mo == "voladoras" || mo == "nadadoras")
+        if (mo == :corredoras || mo == :voladoras || mo == :nadadoras)
             @movilidad = mo
         else
             return nil

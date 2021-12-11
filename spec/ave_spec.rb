@@ -2,10 +2,10 @@ RSpec.describe Granja do
     describe Ave do
     
         before :each do
-            @uno    = Ave.new("corto", "anisodactilas", "corredoras", 1, 10, "macho", 9000)
-            @dos    = Ave.new("grueso y robusto", "palmeadas", "voladoras", 2, 400, "hembra", 2000)
-            @tres   = Ave.new("ancho y aplanado", "anisodactilas", "nadadoras", 3, 333, "macho", 5033)
-            @cuatro = Ave.new("corto", "palmeadas", "corredoras", 50, 1001, "hembra", 8888)
+            @uno    = Ave.new(:corto, :anisodactilas, :corredoras, 1, 10, :macho, 9000)
+            @dos    = Ave.new(:grueso_y_robusto, :palmeadas, :voladoras, 2, 400, :hembra, 2000)
+            @tres   = Ave.new(:ancho_y_aplanado, :anisodactilas, :nadadoras, 3, 333, :macho, 5033)
+            @cuatro = Ave.new(:corto, :palmeadas, :corredoras, 50, 1001, :hembra, 8888)
         end
 
 
@@ -14,27 +14,27 @@ RSpec.describe Granja do
                 expect(Ave.new()).not_to be(nil)
             end
             it "Tiene un atributo para el tipo de pico (corto, grueso y robusto o ancho y aplanado)" do
-                expect(@uno.pico).to eq("corto")
-                expect(@dos.pico).to eq("grueso y robusto")
-                expect(@tres.pico).to eq("ancho y aplanado")
-                expect(@cuatro.pico).to eq("corto")
+                expect(@uno.pico).to eq(:corto)
+                expect(@dos.pico).to eq(:grueso_y_robusto)
+                expect(@tres.pico).to eq(:ancho_y_aplanado)
+                expect(@cuatro.pico).to eq(:corto)
             end 
             it "Tiene un atributo para el tipo de las patas (anisodactilas o palmeadas)" do
-                expect(@uno.patas).to eq("anisodactilas")
-                expect(@dos.patas).to eq("palmeadas")
-                expect(@tres.patas).to eq("anisodactilas")
-                expect(@cuatro.patas).to eq("palmeadas")
+                expect(@uno.patas).to eq(:anisodactilas)
+                expect(@dos.patas).to eq(:palmeadas)
+                expect(@tres.patas).to eq(:anisodactilas)
+                expect(@cuatro.patas).to eq(:palmeadas)
             end
             it "Tiene un atributo para su tipo de movilidad (corredoras, voladoras o nadadoras)" do
-                expect(@uno.movilidad).to eq("corredoras")
-                expect(@dos.movilidad).to eq("voladoras")
-                expect(@tres.movilidad).to eq("nadadoras")
-                expect(@cuatro.movilidad).to eq("corredoras")
+                expect(@uno.movilidad).to eq(:corredoras)
+                expect(@dos.movilidad).to eq(:voladoras)
+                expect(@tres.movilidad).to eq(:nadadoras)
+                expect(@cuatro.movilidad).to eq(:corredoras)
             end
-            it "Se obtiene una cadena con la informaci´on del ave correctamente formateada" do
+            it "Se obtiene una cadena con la informacion del ave correctamente formateada" do
                 expect(@uno.to_s).to eq("La ave tiene un pico corto, unas patas anisodactilas y pertenece al grupo de aves corredoras")
-                expect(@dos.to_s).to eq("La ave tiene un pico grueso y robusto, unas patas palmeadas y pertenece al grupo de aves voladoras")
-                expect(@tres.to_s).to eq("La ave tiene un pico ancho y aplanado, unas patas anisodactilas y pertenece al grupo de aves nadadoras")
+                expect(@dos.to_s).to eq("La ave tiene un pico grueso_y_robusto, unas patas palmeadas y pertenece al grupo de aves voladoras")
+                expect(@tres.to_s).to eq("La ave tiene un pico ancho_y_aplanado, unas patas anisodactilas y pertenece al grupo de aves nadadoras")
                 expect(@cuatro.to_s).to eq("La ave tiene un pico corto, unas patas palmeadas y pertenece al grupo de aves corredoras")
             end
         end
