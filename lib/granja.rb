@@ -7,8 +7,6 @@ require "granja/ave"
 require "granja/funcion"
 
 module Granja
-
-  include Funcion
   
   class Error < StandardError; end
   # Your code goes here...

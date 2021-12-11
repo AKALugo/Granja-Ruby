@@ -77,6 +77,12 @@ RSpec.describe Granja do
                 expect(@tres.is_a? Numeric).to eq(false)
                 expect(@cuatro.is_a? Numeric).to eq(false)   
             end
+            it "Se espera que una instancia de la clase Ave sea un Comparable" do
+                expect(@uno).to be_a_kind_of(Comparable)
+                expect(@dos).to be_a_kind_of(Comparable)
+                expect(@tres).to be_a_kind_of(Comparable)
+                expect(@cuatro).to be_a_kind_of(Comparable)
+            end
         end
 
 

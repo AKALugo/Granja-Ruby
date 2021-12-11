@@ -39,4 +39,8 @@ class Animal
     def <=> other
         @peso <=> other.peso
     end
+
+    def == other
+        @edad == other.edad && @peso == other.peso && @sexo == other.sexo && @identificador == other.identificador
+    end
 end

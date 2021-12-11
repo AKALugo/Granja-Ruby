@@ -43,4 +43,8 @@ class Ave < Animal
 
         @edad <=> other.edad
     end
+
+    def == other
+        @pico == other.pico && @patas == other.patas && @movilidad == other.movilidad
+    end
 end
