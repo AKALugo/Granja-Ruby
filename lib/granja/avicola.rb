@@ -1,6 +1,8 @@
 
 class Avicola < Datos
 
+include Enumerable
+
     attr_reader :ave, :destino, :numero, :precio_unidad, :precio_venta_u, :almacen_animal
 
     def initialize (ave = nil, destino = nil, numero = 0, precio_unidad = 0, precio_venta_u = 0)
@@ -37,4 +39,5 @@ class Avicola < Datos
         s << "su precio por unidad es #{@precio_unidad} y el precio de venta por unidad es #{@precio_venta_u}"
         return s
     end
+
 end

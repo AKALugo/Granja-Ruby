@@ -7,6 +7,7 @@ RSpec.describe Granja do
             @dos    = Avicola.new(:pollos, :sacrificio, 100, 21, 31.50)
             @tres   = Avicola.new(:patos, :huevos, 150, 31.50, 21)
             @cuatro = Avicola.new(:pavos, :sacrificio, 200, 42, 10.50)
+            @grupo  = [@uno, @dos, @tres, @cuatro]
         end
 
 
@@ -95,6 +96,49 @@ RSpec.describe Granja do
                 expect(@dos).not_to be_a_kind_of(Ave)
                 expect(@tres.is_a? Ave).to eq(false)
                 expect(@cuatro.is_a? Ave).to eq(false)   
+            end
+            it "No se espera que una instancia de la clase Avicola sea un Enumerable" do
+                expect(@uno).to be_a_kind_of(Enumerable)
+                expect(@dos).to be_a_kind_of(Enumerable)
+                expect(@tres.is_a? Enumerable).to eq(true)
+                expect(@cuatro.is_a? Enumerable).to eq(true)   
+            end
+        end
+
+        context "Enumerable" do
+            it "Prueba []" do
+                expect(@uno[0]).to eq(:gansos)
+                expect(@dos[:numero]).to eq(100)
+                expect(@tres["precio_unidad"]).to eq(31.50)
+                expect(@cuatro[-4]).to eq(200)
+            end
+            it "Prueba maximo" do
+                expect(@grupo.max).to eq(@cuatro)
+            end
+            it "Prueba minimo" do
+                expect(@grupo.min).to eq(@uno)
+            end
+            it "Prueba sort" do
+                grupo  = [@tres, @cuatro, @uno, @dos]
+                expect(grupo.sort).to eq([@uno, @dos, @tres, @cuatro])
+            end
+            it "Prueba collect" do
+                uno    = Avicola.new(:gansos, :huevos, 500, 10.50, 42)
+                dos    = Avicola.new(:pollos, :sacrificio, 1000, 21, 31.50)
+                tres   = Avicola.new(:patos, :huevos, 1500, 31.50, 21)
+                cuatro = Avicola.new(:pavos, :sacrificio, 2000, 42, 10.50)
+                grupo  = [uno, dos, tres, cuatro]
+                expect(@grupo.collect {|p| p * 10}).to eq(grupo)
+            end
+            it "Prueba detect" do
+                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 50}).to eq(@uno)
+                expect(@grupo.detect {|p| p.ave == :patos && p.destino == :huevos && p.numero == 150}).to eq(@tres)
+                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 55}).to eq(nil)
+            end
+            it "Prueba find_all" do
+                expect(@grupo.find_all {|p| p.destino == :huevos && p.numero >= 50}).to eq([@uno, @tres])
+                expect(@grupo.find_all {|p| p.numero <= 100}).to eq([@uno, @dos])
+                expect(@grupo.find_all {|p| p.ave == :pavos && p.destino == :huevos && p.numero >= 2000 }).to eq([])
             end
         end
     end
