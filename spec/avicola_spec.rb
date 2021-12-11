@@ -48,5 +48,48 @@ RSpec.describe Granja do
                 expect(@cuatro.is_a? Ave).to eq(false)   
             end
         end
+
+
+        context "Atributos de la clase Avicola" do
+            it "Tiene una clase para almacenar los datos de la granja" do
+                expect(Avicola.new()).not_to be(nil)
+            end
+            it "Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)" do
+                expect(@uno.ave).to eq(:gansos)
+                expect(@dos.ave).to eq(:pollos)
+                expect(@tres.ave).to eq(:patos)
+                expect(@cuatro.ave).to eq(:pavos)
+            end 
+            it "Tiene un atributo para el destino de los animales (huevos, sacrificio)" do
+                expect(@uno.destino).to eq(:huevos)
+                expect(@dos.destino).to eq(:sacrificio)
+                expect(@tres.destino).to eq(:huevos)
+                expect(@cuatro.destino).to eq(:sacrificio)
+            end
+            it "Tiene un atributo para el numero de aves de la granja" do
+                expect(@uno.numero).to eq(50)
+                expect(@dos.numero).to eq(100)
+                expect(@tres.numero).to eq(150)
+                expect(@cuatro.numero).to eq(200)
+            end
+            it "Tiene un atributo para el precio unitario de los animales" do
+                expect(@uno.precio_unidad).to eq(10,50)
+                expect(@dos.precio_unidad).to eq(21)
+                expect(@tres.precio_unidad).to eq(31,50)
+                expect(@cuatro.precio_unidad).to eq(42)
+            end
+            it "Tiene un atributo para el precio de venta unitario de los animales" do
+                expect(@uno.precio_venta_u).to eq(42)
+                expect(@dos.precio_venta_u).to eq(31,50)
+                expect(@tres.precio_venta_u).to eq(21)
+                expect(@cuatro.precio_venta_u).to eq(10,50)
+            end
+            it "Tiene un atributo para almacenar las aves de la granja" do
+                expect(@uno.almacen_animal).not_to eq(nil)
+                expect(@dos.almacen_animal).not_to eq(nil)
+                expect(@tres.almacen_animal).not_to eq(nil)
+                expect(@cuatro.almacen_animal).not_to eq(nil)
+            end
+        end
     end
 end
