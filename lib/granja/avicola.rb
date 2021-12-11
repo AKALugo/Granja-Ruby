@@ -100,4 +100,28 @@ include Enumerable
                 nil
         end
     end
+     
+    def puesta_huevos
+        if (@ave == :pollos || @ave == :pavos)
+            return Granja::Funcion::CONDICIONES_DE_VIDA_I
+        else
+            return Granja::Funcion::CONDICIONES_DE_VIDA_E
+        end
+    end
+
+    def antibioticos
+
+        Granja::Funcion.cuidados(@numero * 2)
+    end
+
+    def poblacion_reproduccion
+    
+        cantidad = 0
+        @almacen_animal.each do |elemento|
+            if elemento.edad > 730
+                cantidad = cantidad + 1
+            end
+        end
+        Granja::Funcion.reproduccion(cantidad)
+    end
 end
