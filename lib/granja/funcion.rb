@@ -4,27 +4,19 @@ module Granja
   module Funcion
 
   # Constante.
-  CONDICIONES_DE_VIDA = :campo_abierto
-  CONDICIONES_DE_VIDA1 = :establo
+  CONDICIONES_DE_VIDA_E = :campo_abierto
+  CONDICIONES_DE_VIDA_I = :jaula
 
-      # Método para la función de cuidados
-      def self.cuidados (cui)
-    
-        if (cui == 1) 
-          return "Cuidados intensivos"
-        else 
-          return "Cuidados leves"
+        # Método para la función de cuidados
+        def self.cuidados (cantidad)
+      
+          "Se necesitan #{cantidad} antibióticos de forma semanal en la granja."
         end
-      end
 
-    # Método para la función reproductiva.
-      def self.reproduccion (rep)
+      # Método para la función reproductiva.
+        def self.reproduccion (cantidad)
 
-        if (rep == 1) 
-          return "Época reproductiva"
-        else 
-          return "Época no reproductiva"
+          "Hay #{cantidad} animales preparados para la reproducción."
         end
-      end
     end
 end

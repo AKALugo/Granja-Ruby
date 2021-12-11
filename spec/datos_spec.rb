@@ -42,10 +42,10 @@ RSpec.describe Granja do
       end
   
       it ".to_s de la clase Datos" do
-        expect(@uno.to_s).to eq("La identificacion de la clase es: 1\nEl nombre de la granja es: Granja familia\nEl tipo de granja es: avicola\nLa descripcion de la granja es: Muy bonita")
-        expect(@dos.to_s).to eq("La identificacion de la clase es: 100\nEl nombre de la granja es: Granja R\nEl tipo de granja es: ganadera\nLa descripcion de la granja es: Muy fea")
-        expect(@tres.to_s).to eq("La identificacion de la clase es: Granja Sur\nEl nombre de la granja es: Granja Sur\nEl tipo de granja es: avicola\nLa descripcion de la granja es: Grande")
-        expect(@cuatro.to_s).to eq("La identificacion de la clase es: Granja Pepe\nEl nombre de la granja es: Granja Pepe\nEl tipo de granja es: ganadera\nLa descripcion de la granja es: Horrible")
+        expect(@uno.to_s).to eq("La identificacion de la granja es: 1, su nombre es: Granja familia, su tipo es: avicola y su descripción es: Muy bonita")
+        expect(@dos.to_s).to eq("La identificacion de la granja es: 100, su nombre es: Granja R, su tipo es: ganadera y su descripción es: Muy fea")
+        expect(@tres.to_s).to eq("La identificacion de la granja es: Granja Sur, su nombre es: Granja Sur, su tipo es: avicola y su descripción es: Grande")
+        expect(@cuatro.to_s).to eq("La identificacion de la granja es: Granja Pepe, su nombre es: Granja Pepe, su tipo es: ganadera y su descripción es: Horrible")
       end
     end
 

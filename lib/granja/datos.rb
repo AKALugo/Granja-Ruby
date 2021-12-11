@@ -6,7 +6,7 @@ class Datos
   attr_reader :identificacion, :nombre, :tipo, :descripcion
 
   # Método que inicializa las variables de instancia.
-  def initialize (iden = "", nom = "", tip = "", desc = "")
+  def initialize (iden = nil, nom = "", tip = nil, desc = "")
 
     if (tip == :avicola || tip == :ganadera)
       @tipo = tip
@@ -23,6 +23,6 @@ class Datos
   # @return [String]
   def to_s
 
-    "La identificacion de la clase es: #{@identificacion}\nEl nombre de la granja es: #{@nombre}\nEl tipo de granja es: #{@tipo}\nLa descripcion de la granja es: #{@descripcion}"
+    "La identificacion de la granja es: #{@identificacion}, su nombre es: #{@nombre}, su tipo es: #{@tipo} y su descripción es: #{@descripcion}"
   end
 end

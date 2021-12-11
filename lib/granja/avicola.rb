@@ -3,9 +3,10 @@ class Avicola < Datos
 
 include Enumerable
 
+
     attr_reader :ave, :destino, :numero, :precio_unidad, :precio_venta_u, :almacen_animal
 
-    def initialize (ave = nil, destino = nil, numero = 0, precio_unidad = 0, precio_venta_u = 0)
+    def initialize (ave = nil, destino = nil, numero = 0, precio_unidad = 0, precio_venta_u = 0, ide = nil, nom = "", desc = "")
         
         if (ave == :gansos || ave == :pollos || ave == :patos || ave = :pavos)
             @ave = ave
@@ -19,6 +20,8 @@ include Enumerable
             return nil
         end
 
+        super(ide, nom, :avicola, desc)
+
         @numero = numero
         @precio_unidad = precio_unidad
         @precio_venta_u = precio_venta_u
@@ -27,7 +30,7 @@ include Enumerable
 
     def add_animal other
 
-        if (other.respond_to? Ave)
+        if (other.instance_of? Ave)
             @almacen_animal.push(other)
         else
             return "Solo se pueden almacenar Aves."
@@ -68,7 +71,6 @@ include Enumerable
     end
 
     def [] index
-
         case index
             when 0, -6
                 @ave

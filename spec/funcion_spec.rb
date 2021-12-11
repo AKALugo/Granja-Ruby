@@ -7,16 +7,16 @@ RSpec.describe Granja do
         expect(Granja::Funcion).not_to eq(nil)
       end
       it "Existe una constante para representar las condiciones de vida (campo abierto, establo)" do
-        expect(Granja::Funcion::CONDICIONES_DE_VIDA).to eq(:campo_abierto)
-        expect(Granja::Funcion::CONDICIONES_DE_VIDA1).to eq(:establo)
+        expect(Granja::Funcion::CONDICIONES_DE_VIDA_E).to eq(:campo_abierto)
+        expect(Granja::Funcion::CONDICIONES_DE_VIDA_I).to eq(:jaula)
       end
       it "Existe un procedimiento para establecer los cuidados de los animales" do
-        expect(Granja::Funcion.cuidados(1)).to eq("Cuidados intensivos")
-        expect(Granja::Funcion.cuidados(0)).to eq("Cuidados leves")
+        expect(Granja::Funcion.cuidados(10)).to eq("Se necesitan 10 antibióticos de forma semanal en la granja.")
+        expect(Granja::Funcion.cuidados(50)).to eq("Se necesitan 50 antibióticos de forma semanal en la granja.")
       end
       it "Existe un procedimiento para establecer la reproduccion de los animales" do
-        expect(Granja::Funcion.reproduccion(1)).to eq("Época reproductiva")
-        expect(Granja::Funcion.reproduccion(0)).to eq("Época no reproductiva")
+        expect(Granja::Funcion.reproduccion(100)).to eq("Hay 100 animales preparados para la reproducción.")
+        expect(Granja::Funcion.reproduccion(20)).to eq("Hay 20 animales preparados para la reproducción.")
       end
     end
 

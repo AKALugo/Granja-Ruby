@@ -141,5 +141,30 @@ RSpec.describe Granja do
                 expect(@grupo.find_all {|p| p.ave == :pavos && p.destino == :huevos && p.numero >= 2000 }).to eq([])
             end
         end
+
+
+
+        context "Funciones Avicolas" do
+            it "Gestion de puesta de huevos" do
+                expect(@uno.puesta_huevos).to eq(:campo_abierto)
+                expect(@dos.puesta_huevos).to eq(:jaula)
+                expect(@tres.puesta_huevos).to eq(:campo_abierto)
+                expect(@cuatro.puesta_huevos).to eq(:jaula)
+            end
+            it "Uso de antibióticos" do
+                expect(@uno.antibioticos).to eq("Se necesitan 100 antibióticos de forma semanal en la granja.")
+                expect(@dos.antibioticos).to eq("Se necesitan 200 antibióticos de forma semanal en la granja.")
+                expect(@tres.antibioticos).to eq("Se necesitan 300 antibióticos de forma semanal en la granja.")
+                expect(@cuatro.antibioticos).to eq("Se necesitan 400 antibióticos de forma semanal en la granja.")
+            end
+            it "Población reproductora" do
+                @uno.add_animal(Ave.new(:corto, :anisodactilas, :corredoras, 1, 1000, :macho, 9000))
+                @uno.add_animal(Ave.new(:grueso_y_robusto, :palmeadas, :voladoras, 2, 2000, :hembra, 2000))
+                @uno.add_animal(Ave.new(:ancho_y_aplanado, :anisodactilas, :nadadoras, 3, 333, :macho, 5033))
+                @uno.add_animal(Ave.new(:corto, :palmeadas, :corredoras, 50, 731, :hembra, 8888))
+
+                expect(@uno.poblacion_reproduccion).to eq("Hay 3 animales preparados para la reproducción.")
+            end
+        end
     end
 end
