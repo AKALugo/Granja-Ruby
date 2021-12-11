@@ -1048,3 +1048,38 @@ Failures:
 Finished in 0.0283 seconds (files took 0.16139 seconds to load)
 81 examples, 3 failures
 ```
+
+### Arreglo: Funcion clase Avicola
+```
+Granja
+  Avicola
+    Atributos de la clase Avicola
+      Tiene una clase para almacenar los datos de la granja
+      Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)
+      Tiene un atributo para el destino de los animales (huevos, sacrificio)
+      Tiene un atributo para el numero de aves de la granja
+      Tiene un atributo para el precio unitario de los animales
+      Tiene un atributo para el precio de venta unitario de los animales
+      Tiene un atributo para almacenar las aves de la granja
+      Se obtiene una cadena con la informacion de la granja avicola correctamente formateada
+    Herencia de la clase Avicola
+      Se espera que una instancia de la clase Avicola sea una granja Avicola
+      Se espera que una instancia de la clase Avicola sea un Dato
+      Se espera que una instancia de la clase Avicola sea un objeto (Object)
+      Se espera que una instancia de la clase Avicola sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Avicola sea un Animal
+      No se espera que una instancia de la clase Avicola sea un Ave
+      No se espera que una instancia de la clase Avicola sea un Enumerable
+    Enumerable
+      Prueba []
+      Prueba maximo
+      Prueba minimo
+      Prueba sort
+      Prueba collect
+      Prueba detect
+      Prueba find_all
+    Funciones Avicolas
+      Gestion de puesta de huevos
+      Uso de antibióticos
+      Población reproductora
+```
