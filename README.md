@@ -940,3 +940,51 @@ Granja
 ```
 
 ### Método to_s de la clase Avicola
+
+### Error: Enumerable clase Avicola
+```
+Failures:
+
+  1) Granja Avicola Enumerable Prueba []
+     Failure/Error: expect(@uno[0]).to eq(:gansos)
+     
+     NoMethodError:
+       undefined method `[]' for #<Avicola:0x000055af7dc40950>
+     # ./spec/avicola_spec.rb:110:in `block (4 levels) in <top (required)>'
+
+  2) Granja Avicola Enumerable Prueba maximo
+     Failure/Error: expect(@grupo.max).to eq(@cuatro)
+     
+     ArgumentError:
+       comparison of Avicola with Avicola failed
+     # ./spec/avicola_spec.rb:116:in `max'
+     # ./spec/avicola_spec.rb:116:in `block (4 levels) in <top (required)>'
+
+  3) Granja Avicola Enumerable Prueba minimo
+     Failure/Error: expect(@grupo.min).to eq(@uno)
+     
+     ArgumentError:
+       comparison of Avicola with Avicola failed
+     # ./spec/avicola_spec.rb:119:in `min'
+     # ./spec/avicola_spec.rb:119:in `block (4 levels) in <top (required)>'
+
+  4) Granja Avicola Enumerable Prueba sort
+     Failure/Error: expect(grupo.sort).to eq([@uno, @dos, @tres, @cuatro])
+     
+     ArgumentError:
+       comparison of Avicola with Avicola failed
+     # ./spec/avicola_spec.rb:123:in `sort'
+     # ./spec/avicola_spec.rb:123:in `block (4 levels) in <top (required)>'
+
+  5) Granja Avicola Enumerable Prueba collect
+     Failure/Error: expect(@grupo.collect {|p| p * 10}).to eq(grupo)
+     
+     NoMethodError:
+       undefined method `*' for #<Avicola:0x000055af7dc37760>
+     # ./spec/avicola_spec.rb:131:in `block (5 levels) in <top (required)>'
+     # ./spec/avicola_spec.rb:131:in `collect'
+     # ./spec/avicola_spec.rb:131:in `block (4 levels) in <top (required)>'
+
+Finished in 0.03275 seconds (files took 0.15957 seconds to load)
+78 examples, 5 failures
+```
