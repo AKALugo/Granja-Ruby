@@ -50,6 +50,12 @@ RSpec.describe Granja do
                 expect(@tres.almacen_animal).not_to eq(nil)
                 expect(@cuatro.almacen_animal).not_to eq(nil)
             end
+            it "Se obtiene una cadena con la informacion de la granja avicola correctamente formateada" do
+                expect(@uno.to_s).to eq("La granja Avicola tiene como aves a los gansos, el destino de estas aves es huevos, en la granja hay 50 de aves, su precio por unidad es 10.5 y el precio de venta por unidad es 42")
+                expect(@dos.to_s).to eq("La granja Avicola tiene como aves a los pollos, el destino de estas aves es sacrificio, en la granja hay 100 de aves, su precio por unidad es 21 y el precio de venta por unidad es 31.5")
+                expect(@tres.to_s).to eq("La granja Avicola tiene como aves a los patos, el destino de estas aves es huevos, en la granja hay 150 de aves, su precio por unidad es 31.5 y el precio de venta por unidad es 21")
+                expect(@cuatro.to_s).to eq("La granja Avicola tiene como aves a los pavos, el destino de estas aves es sacrificio, en la granja hay 200 de aves, su precio por unidad es 42 y el precio de venta por unidad es 10.5")
+            end
         end
 
 

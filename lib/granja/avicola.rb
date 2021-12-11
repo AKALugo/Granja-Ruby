@@ -22,4 +22,19 @@ class Avicola < Datos
         @precio_venta_u = precio_venta_u
         @almacen_animal = []
     end
+
+    def add_animal other
+
+        if (other.respond_to? Ave)
+            @almacen_animal.push(other)
+        else
+            return "Solo se pueden almacenar Aves."
+        end
+    end
+
+    def to_s
+        s = "La granja Avicola tiene como aves a los #{@ave}, el destino de estas aves es #{@destino}, en la granja hay #{@numero} de aves, "
+        s << "su precio por unidad es #{@precio_unidad} y el precio de venta por unidad es #{@precio_venta_u}"
+        return s
+    end
 end
