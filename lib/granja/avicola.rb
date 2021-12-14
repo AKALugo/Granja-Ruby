@@ -31,7 +31,7 @@ module Granja
             @almacen_animal = almacen_animal
         end
 
-        # Método para añadir animales a nuestra granja
+        # Método para añadir animales a nuestra granja sin romper el encapsulamiento.
         def add_animal other
 
             if (other.instance_of? Granja::Ave)
@@ -107,7 +107,7 @@ module Granja
             end
         end
         
-        # Método que 
+        # Método que indica como se deben resguardar los animales.
         def puesta_huevos
             if (@ave == :pollos || @ave == :pavos)
                 return Granja::Funcion::CONDICIONES_DE_VIDA_I
