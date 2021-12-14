@@ -1,17 +1,17 @@
 RSpec.describe Granja do
-    describe Animal do
+    describe Granja::Animal do
         
         before :each do
-            @uno    = Animal.new(1, 400, :macho, 900.1)
-            @dos    = Animal.new(2, 10, :hembra, 200.2)
-            @tres   = Animal.new(3, 333, :macho, 503.3)
-            @cuatro = Animal.new(50, 1001, :hembra, 888.4)
+            @uno    = Granja::Animal.new(1, 400, :macho, 900.1)
+            @dos    = Granja::Animal.new(2, 10, :hembra, 200.2)
+            @tres   = Granja::Animal.new(3, 333, :macho, 503.3)
+            @cuatro = Granja::Animal.new(50, 1001, :hembra, 888.4)
         end
 
 
         context "Atributos de la clase Animal" do
             it "Tiene una clase para representar animales" do
-                expect(Animal.new()).not_to be(nil)
+                expect(Granja::Animal.new()).not_to be(nil)
             end
 
             it "Tiene un atributo para identificar al animal" do
@@ -45,17 +45,17 @@ RSpec.describe Granja do
                 expect(@cuatro.to_s).to eq("El animal 50 de 1001 dias de vida es hembra con un peso de 888.4 gramos")
             end
             it "Contador de objetos de la clase Animal" do
-                expect(Animal.contador).to eq(29)
+                expect(Granja::Animal.contador).to eq(29)
             end
         end
 
 
         context "Herencia de la Animal" do
             it "Se espera que una instancia de la clase Animal sea un Animal" do
-                expect(@uno).to be_a_kind_of(Animal)
-                expect(@dos).to be_a_kind_of(Animal)
-                expect(@tres.is_a? Animal).to eq(true)
-                expect(@cuatro.is_a? Animal).to eq(true)
+                expect(@uno).to be_a_kind_of(Granja::Animal)
+                expect(@dos).to be_a_kind_of(Granja::Animal)
+                expect(@tres.is_a? Granja::Animal).to eq(true)
+                expect(@cuatro.is_a? Granja::Animal).to eq(true)
             end
             it "Se espera que una instancia de la clase Animal sea un objeto (Object)" do
                 expect(@uno).to be_a_kind_of(Object)

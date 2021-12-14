@@ -3,5 +3,5 @@
 # Módulo Granja (Gema)
 module Granja
   # Versión de la gema.
-  VERSION = "0.2.0"
+  VERSION = "0.3.0"
 end

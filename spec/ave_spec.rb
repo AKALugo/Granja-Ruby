@@ -1,11 +1,11 @@
 RSpec.describe Granja do
-    describe Ave do
+    describe Granja::Ave do
     
         before :each do
-            @uno    = Ave.new(:corto, :anisodactilas, :corredoras, 1, 10, :macho, 9000)
-            @dos    = Ave.new(:grueso_y_robusto, :palmeadas, :voladoras, 2, 400, :hembra, 2000)
-            @tres   = Ave.new(:ancho_y_aplanado, :anisodactilas, :nadadoras, 3, 333, :macho, 5033)
-            @cuatro = Ave.new(:corto, :palmeadas, :corredoras, 50, 1001, :hembra, 8888)
+            @uno    = Granja::Ave.new(1, 10, :macho, 900.1, :corto, :anisodactilas, :corredoras)
+            @dos    = Granja::Ave.new(2, 400, :hembra, 200.2, :grueso_y_robusto, :palmeadas, :voladoras)
+            @tres   = Granja::Ave.new(3, 333, :macho, 503.3, :ancho_y_aplanado, :anisodactilas, :nadadoras)
+            @cuatro = Granja::Ave.new(50, 1001, :hembra, 888.8, :corto, :palmeadas, :corredoras)
         end
 
 
@@ -45,16 +45,16 @@ RSpec.describe Granja do
 
         context "Herencia de la clase Ave" do
             it "Se espera que una instancia de la clase Ave sea un Ave" do
-                expect(@uno).to be_a_kind_of(Ave)
-                expect(@dos).to be_a_kind_of(Ave)
-                expect(@tres.is_a? Ave).to eq(true)
-                expect(@cuatro.is_a? Ave).to eq(true)
+                expect(@uno).to be_a_kind_of(Granja::Ave)
+                expect(@dos).to be_a_kind_of(Granja::Ave)
+                expect(@tres.is_a? Granja::Ave).to eq(true)
+                expect(@cuatro.is_a? Granja::Ave).to eq(true)
             end
             it "Se espera que una instancia de la clase Ave sea un Animal" do
-                expect(@uno).to be_a_kind_of(Animal)
-                expect(@dos).to be_a_kind_of(Animal)
-                expect(@tres.is_a? Animal).to eq(true)
-                expect(@cuatro.is_a? Animal).to eq(true)
+                expect(@uno).to be_a_kind_of(Granja::Animal)
+                expect(@dos).to be_a_kind_of(Granja::Animal)
+                expect(@tres.is_a? Granja::Animal).to eq(true)
+                expect(@cuatro.is_a? Granja::Animal).to eq(true)
             end
             it "Se espera que una instancia de la clase Ave sea un objeto (Object)" do
                 expect(@uno).to be_a_kind_of(Object)

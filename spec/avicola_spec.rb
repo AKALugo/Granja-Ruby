@@ -1,19 +1,27 @@
 RSpec.describe Granja do
-    describe Avicola do
+    describe Granja::Avicola do
 
 
         before :each do
-            @uno    = Avicola.new(:gansos, :huevos, 50, 10.50, 42)
-            @dos    = Avicola.new(:pollos, :sacrificio, 100, 21, 31.50)
-            @tres   = Avicola.new(:patos, :huevos, 150, 31.50, 21)
-            @cuatro = Avicola.new(:pavos, :sacrificio, 200, 42, 10.50)
+            @ganso1 = Granja::Ave.new(1, 999, :macho, 900.1, :corto, :anisodactilas, :corredoras)
+            @pollo1 = Granja::Ave.new(1, 2000, :hembra, 200.2, :grueso_y_robusto, :palmeadas, :voladoras)
+            @pato1  = Granja::Ave.new(1, 221, :macho, 503.3, :ancho_y_aplanado, :anisodactilas, :nadadoras)
+            @pato2  = Granja::Ave.new(2, 1590, :macho, 503.3, :ancho_y_aplanado, :anisodactilas, :nadadoras)
+            @pavo1  = Granja::Ave.new(1, 301, :hembra, 888.8, :corto, :palmeadas, :corredoras)
+            @pavo2  = Granja::Ave.new(2, 100, :hembra, 888.8, :corto, :palmeadas, :corredoras)
+
+            @uno    = Granja::Avicola.new(1, "Granja Gansos", "Gansos de calidad", :gansos, :huevos, 1, 10.50, 42, [@ganso1])
+            @dos    = Granja::Avicola.new(2, "Granja Pollos", "Pollos de calidad", :pollos, :sacrificio, 1, 21, 31.50, [@pollo1])
+            @tres   = Granja::Avicola.new(3, "Granja Patos", "Patos de calidad", :patos, :huevos, 2, 31.50, 21, [@pato1, @pato2])
+            @cuatro = Granja::Avicola.new(4, "Granja Pavos", "Pavos de calidad", :pavos, :sacrificio, 2, 42, 10.50, [@pavo1, @pavo2])
             @grupo  = [@uno, @dos, @tres, @cuatro]
         end
 
 
+
         context "Atributos de la clase Avicola" do
             it "Tiene una clase para almacenar los datos de la granja" do
-                expect(Avicola.new()).not_to be(nil)
+                expect(Granja::Avicola.new()).not_to be(nil)
             end
             it "Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)" do
                 expect(@uno.ave).to eq(:gansos)
@@ -28,10 +36,10 @@ RSpec.describe Granja do
                 expect(@cuatro.destino).to eq(:sacrificio)
             end
             it "Tiene un atributo para el numero de aves de la granja" do
-                expect(@uno.numero).to eq(50)
-                expect(@dos.numero).to eq(100)
-                expect(@tres.numero).to eq(150)
-                expect(@cuatro.numero).to eq(200)
+                expect(@uno.numero).to eq(1)
+                expect(@dos.numero).to eq(1)
+                expect(@tres.numero).to eq(2)
+                expect(@cuatro.numero).to eq(2)
             end
             it "Tiene un atributo para el precio unitario de los animales" do
                 expect(@uno.precio_unidad).to eq(10.50)
@@ -52,26 +60,27 @@ RSpec.describe Granja do
                 expect(@cuatro.almacen_animal).not_to eq(nil)
             end
             it "Se obtiene una cadena con la informacion de la granja avicola correctamente formateada" do
-                expect(@uno.to_s).to eq("La granja Avicola tiene como aves a los gansos, el destino de estas aves es huevos, en la granja hay 50 de aves, su precio por unidad es 10.5 y el precio de venta por unidad es 42")
-                expect(@dos.to_s).to eq("La granja Avicola tiene como aves a los pollos, el destino de estas aves es sacrificio, en la granja hay 100 de aves, su precio por unidad es 21 y el precio de venta por unidad es 31.5")
-                expect(@tres.to_s).to eq("La granja Avicola tiene como aves a los patos, el destino de estas aves es huevos, en la granja hay 150 de aves, su precio por unidad es 31.5 y el precio de venta por unidad es 21")
-                expect(@cuatro.to_s).to eq("La granja Avicola tiene como aves a los pavos, el destino de estas aves es sacrificio, en la granja hay 200 de aves, su precio por unidad es 42 y el precio de venta por unidad es 10.5")
+                expect(@uno.to_s).to eq("La granja Avicola tiene como aves a los gansos, el destino de estas aves es huevos, en la granja hay 1 de aves, su precio por unidad es 10.5 y el precio de venta por unidad es 42")
+                expect(@dos.to_s).to eq("La granja Avicola tiene como aves a los pollos, el destino de estas aves es sacrificio, en la granja hay 1 de aves, su precio por unidad es 21 y el precio de venta por unidad es 31.5")
+                expect(@tres.to_s).to eq("La granja Avicola tiene como aves a los patos, el destino de estas aves es huevos, en la granja hay 2 de aves, su precio por unidad es 31.5 y el precio de venta por unidad es 21")
+                expect(@cuatro.to_s).to eq("La granja Avicola tiene como aves a los pavos, el destino de estas aves es sacrificio, en la granja hay 2 de aves, su precio por unidad es 42 y el precio de venta por unidad es 10.5")
             end
         end
 
 
+
         context "Herencia de la clase Avicola" do
             it "Se espera que una instancia de la clase Avicola sea una granja Avicola" do
-                expect(@uno).to be_a_kind_of(Avicola)
-                expect(@dos).to be_a_kind_of(Avicola)
-                expect(@tres.is_a? Avicola).to eq(true)
-                expect(@cuatro.is_a? Avicola).to eq(true)
+                expect(@uno).to be_a_kind_of(Granja::Avicola)
+                expect(@dos).to be_a_kind_of(Granja::Avicola)
+                expect(@tres.is_a? Granja::Avicola).to eq(true)
+                expect(@cuatro.is_a? Granja::Avicola).to eq(true)
             end
             it "Se espera que una instancia de la clase Avicola sea un Dato" do
-                expect(@uno).to be_a_kind_of(Datos)
-                expect(@dos).to be_a_kind_of(Datos)
-                expect(@tres.is_a? Datos).to eq(true)
-                expect(@cuatro.is_a? Datos).to eq(true)
+                expect(@uno).to be_a_kind_of(Granja::Datos)
+                expect(@dos).to be_a_kind_of(Granja::Datos)
+                expect(@tres.is_a? Granja::Datos).to eq(true)
+                expect(@cuatro.is_a? Granja::Datos).to eq(true)
             end
             it "Se espera que una instancia de la clase Avicola sea un objeto (Object)" do
                 expect(@uno).to be_a_kind_of(Object)
@@ -86,16 +95,16 @@ RSpec.describe Granja do
                 expect(@cuatro.is_a? BasicObject).to eq(true)
             end
             it "No se espera que una instancia de la clase Avicola sea un Animal" do
-                expect(@uno).not_to be_a_kind_of(Animal)
-                expect(@dos).not_to be_a_kind_of(Animal)
-                expect(@tres.is_a? Animal).to eq(false)
-                expect(@cuatro.is_a? Animal).to eq(false)
+                expect(@uno).not_to be_a_kind_of(Granja::Animal)
+                expect(@dos).not_to be_a_kind_of(Granja::Animal)
+                expect(@tres.is_a? Granja::Animal).to eq(false)
+                expect(@cuatro.is_a? Granja::Animal).to eq(false)
             end
             it "No se espera que una instancia de la clase Avicola sea un Ave" do
-                expect(@uno).not_to be_a_kind_of(Ave)
-                expect(@dos).not_to be_a_kind_of(Ave)
-                expect(@tres.is_a? Ave).to eq(false)
-                expect(@cuatro.is_a? Ave).to eq(false)   
+                expect(@uno).not_to be_a_kind_of(Granja::Ave)
+                expect(@dos).not_to be_a_kind_of(Granja::Ave)
+                expect(@tres.is_a? Granja::Ave).to eq(false)
+                expect(@cuatro.is_a? Granja::Ave).to eq(false)   
             end
             it "No se espera que una instancia de la clase Avicola sea un Enumerable" do
                 expect(@uno).to be_a_kind_of(Enumerable)
@@ -105,39 +114,108 @@ RSpec.describe Granja do
             end
         end
 
-        context "Enumerable" do
-            it "Prueba []" do
-                expect(@uno[0]).to eq(:gansos)
-                expect(@dos[:numero]).to eq(100)
-                expect(@tres["precio_unidad"]).to eq(31.50)
-                expect(@cuatro[-4]).to eq(200)
+
+
+        # Si no se le especifica bloque ruby crea uno por defecto {|obj| obj}
+        context "Haciendo Avicola Enumerable" do
+            before :each do
+                @vacio  = Granja::Avicola.new
             end
-            it "Prueba maximo" do
-                expect(@grupo.max).to eq(@cuatro)
+            it "comprobrando el metodo all?o" do
+                expect(@uno.all?(Numeric)).to eq(true)
+                expect(@dos.all?(Numeric)).to eq(true)
+                expect(@tres.all?(Numeric)).to eq(true)
+                expect(@vacio.all?(Numeric)).to eq(false)
+              end
+              it "comprobrando el metodo any?" do
+                expect(@uno.any?).to eq(true)
+                expect(@dos.any?).to eq(true)
+                expect(@tres.any?).to eq(true)
+                expect(@vacio.any?).to eq(false)
+              end
+              it "comprobrando el metodo collect" do
+                expect(@uno.collect{|obj| obj}).to eq([1, 10.50, 42])
+                expect(@dos.collect{|obj| obj}).to eq([1, 21, 31.50])
+                expect(@tres.collect{|obj| obj}).to eq([2, 31.50, 21])
+                expect(@cuatro.collect{|obj| obj}).to eq([2, 42, 10.50])
+              end
+              it "comprobrando el metodo map" do
+                expect(@uno.map{|obj| obj}).to eq([1, 10.50, 42])
+                expect(@dos.map{|obj| obj}).to eq([1, 21, 31.50])
+                expect(@tres.map{|obj| obj}).to eq([2, 31.50, 21])
+                expect(@cuatro.map{|obj| obj}).to eq([2, 42, 10.50])
+              end
+              it "comprobrando el metodo count" do
+                expect(@uno.count).to eq(3)
+                expect(@tres.count).to eq(3)
+                expect(@cuatro.count).to eq(3)
+                expect(@vacio.count).to eq(3)
+              end
+              it "comprobrando el metodo find" do
+                expect(@uno.find {|i| i == 1}).to eq(1)
+                expect(@dos.find {|i| i == 21}).to eq(21)
+                expect(@tres.find {|i| i == 2}).to eq(2)
+                expect(@cuatro.find {|i| i == 10.50}).to eq(10.50)
+              end
+              it "comprobrando el metodo detect" do
+                expect(@uno.detect {|i| i == 1}).to eq(1)
+                expect(@dos.detect {|i| i == 21}).to eq(21)
+                expect(@tres.detect {|i| i == 2}).to eq(2)
+                expect(@cuatro.detect {|i| i == 10.50}).to eq(10.50)
+              end
+              it "comprobrando el metodo drop" do
+                expect(@uno.drop(0)).to eq([1, 10.50, 42])
+                expect(@dos.drop(1)).to eq([21, 31.50])
+                expect(@tres.drop(2)).to eq([21])
+                expect(@cuatro.drop(1)).to eq([42, 10.50])
+              end
+              it "comprobrando el metodo drop_while" do
+                expect(@uno.drop_while{|obj| obj != 1}).to eq([1, 10.50, 42])
+                expect(@dos.drop_while{|obj| obj != 31.50}).to eq([31.50])
+                expect(@tres.drop_while{|obj| obj != 31.50}).to eq([31.50, 21])
+                expect(@cuatro.drop_while{|obj| obj != 2}).to eq([2, 42, 10.50])
+              end
+              it "comprobrando el metodo max" do
+                expect(@uno.max).to eq(42)
+                expect(@dos.max).to eq(31.50)
+                expect(@tres.max).to eq(31.50)
+                expect(@cuatro.max).to eq(42)
+              end
+              it "comprobrando el metodo min" do
+                expect(@uno.min).to eq(1)
+                expect(@dos.min).to eq(1)
+                expect(@tres.min).to eq(2)
+                expect(@cuatro.min).to eq(2)
+              end
+              it "comprobrando el metodo sort" do
+                expect(@uno.sort).to eq([1, 10.50, 42])
+                expect(@dos.sort).to eq([1, 21, 31.50])
+                expect(@tres.sort).to eq([2, 21, 31.50])
+                expect(@cuatro.sort).to eq([2, 10.50, 42])
+              end
+        end
+
+
+
+        context "Haciendo que la clase Avicola funcione con el Enumerable de Array" do
+            it "Prueba maximo para Array" do
+                expect(@grupo.max).to eq(@tres)
             end
-            it "Prueba minimo" do
+            it "Prueba minimo para Array" do
                 expect(@grupo.min).to eq(@uno)
             end
-            it "Prueba sort" do
+            it "Prueba sort para Array" do
                 grupo  = [@tres, @cuatro, @uno, @dos]
                 expect(grupo.sort).to eq([@uno, @dos, @tres, @cuatro])
             end
-            it "Prueba collect" do
-                uno    = Avicola.new(:gansos, :huevos, 500, 10.50, 42)
-                dos    = Avicola.new(:pollos, :sacrificio, 1000, 21, 31.50)
-                tres   = Avicola.new(:patos, :huevos, 1500, 31.50, 21)
-                cuatro = Avicola.new(:pavos, :sacrificio, 2000, 42, 10.50)
-                grupo  = [uno, dos, tres, cuatro]
-                expect(@grupo.collect {|p| p * 10}).to eq(grupo)
-            end
-            it "Prueba detect" do
-                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 50}).to eq(@uno)
-                expect(@grupo.detect {|p| p.ave == :patos && p.destino == :huevos && p.numero == 150}).to eq(@tres)
+            it "Prueba detect para Array" do
+                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 1}).to eq(@uno)
+                expect(@grupo.detect {|p| p.ave == :patos && p.destino == :huevos && p.numero == 2}).to eq(@tres)
                 expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 55}).to eq(nil)
             end
-            it "Prueba find_all" do
-                expect(@grupo.find_all {|p| p.destino == :huevos && p.numero >= 50}).to eq([@uno, @tres])
-                expect(@grupo.find_all {|p| p.numero <= 100}).to eq([@uno, @dos])
+            it "Prueba find_all para Array" do
+                expect(@grupo.find_all {|p| p.destino == :huevos && p.numero >= 1}).to eq([@uno, @tres])
+                expect(@grupo.find_all {|p| p.numero <= 1}).to eq([@uno, @dos])
                 expect(@grupo.find_all {|p| p.ave == :pavos && p.destino == :huevos && p.numero >= 2000 }).to eq([])
             end
         end
@@ -145,6 +223,12 @@ RSpec.describe Granja do
 
 
         context "Funciones Avicolas" do
+            it "Prueba []" do
+                expect(@uno[0]).to eq(:gansos)
+                expect(@dos[:numero]).to eq(1)
+                expect(@tres["precio_unidad"]).to eq(31.50)
+                expect(@cuatro[-4]).to eq(2)
+            end
             it "Gestion de puesta de huevos" do
                 expect(@uno.puesta_huevos).to eq(:campo_abierto)
                 expect(@dos.puesta_huevos).to eq(:jaula)
@@ -152,18 +236,16 @@ RSpec.describe Granja do
                 expect(@cuatro.puesta_huevos).to eq(:jaula)
             end
             it "Uso de antibióticos" do
-                expect(@uno.antibioticos).to eq("Se necesitan 100 antibióticos de forma semanal en la granja.")
-                expect(@dos.antibioticos).to eq("Se necesitan 200 antibióticos de forma semanal en la granja.")
-                expect(@tres.antibioticos).to eq("Se necesitan 300 antibióticos de forma semanal en la granja.")
-                expect(@cuatro.antibioticos).to eq("Se necesitan 400 antibióticos de forma semanal en la granja.")
+                expect(@uno.antibioticos(500.5)).to eq("Hay 0 animales que necesitan 500.5 ml de antibióticos de forma semanal")
+                expect(@dos.antibioticos(500.5)).to eq("Hay 0 animales que necesitan 500.5 ml de antibióticos de forma semanal")
+                expect(@tres.antibioticos(500.5)).to eq("Hay 1 animales que necesitan 500.5 ml de antibióticos de forma semanal")
+                expect(@cuatro.antibioticos(500.5)).to eq("Hay 2 animales que necesitan 500.5 ml de antibióticos de forma semanal")
             end
             it "Población reproductora" do
-                @uno.add_animal(Ave.new(:corto, :anisodactilas, :corredoras, 1, 1000, :macho, 9000))
-                @uno.add_animal(Ave.new(:grueso_y_robusto, :palmeadas, :voladoras, 2, 2000, :hembra, 2000))
-                @uno.add_animal(Ave.new(:ancho_y_aplanado, :anisodactilas, :nadadoras, 3, 333, :macho, 5033))
-                @uno.add_animal(Ave.new(:corto, :palmeadas, :corredoras, 50, 731, :hembra, 8888))
-
-                expect(@uno.poblacion_reproduccion).to eq("Hay 3 animales preparados para la reproducción.")
+                expect(@uno.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
+                expect(@dos.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
+                expect(@tres.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
+                expect(@cuatro.poblacion_reproduccion(24)).to eq("Hay 0 animales preparados para la reproducción.")
             end
         end
     end
