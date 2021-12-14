@@ -197,31 +197,6 @@ RSpec.describe Granja do
 
 
 
-        context "Haciendo que la clase Avicola funcione con el Enumerable de Array" do
-            it "Prueba maximo para Array" do
-                expect(@grupo.max).to eq(@tres)
-            end
-            it "Prueba minimo para Array" do
-                expect(@grupo.min).to eq(@uno)
-            end
-            it "Prueba sort para Array" do
-                grupo  = [@tres, @cuatro, @uno, @dos]
-                expect(grupo.sort).to eq([@uno, @dos, @tres, @cuatro])
-            end
-            it "Prueba detect para Array" do
-                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 1}).to eq(@uno)
-                expect(@grupo.detect {|p| p.ave == :patos && p.destino == :huevos && p.numero == 2}).to eq(@tres)
-                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 55}).to eq(nil)
-            end
-            it "Prueba find_all para Array" do
-                expect(@grupo.find_all {|p| p.destino == :huevos && p.numero >= 1}).to eq([@uno, @tres])
-                expect(@grupo.find_all {|p| p.numero <= 1}).to eq([@uno, @dos])
-                expect(@grupo.find_all {|p| p.ave == :pavos && p.destino == :huevos && p.numero >= 2000 }).to eq([])
-            end
-        end
-
-
-
         context "Funciones Avicolas" do
             it "Prueba []" do
                 expect(@uno[0]).to eq(:gansos)
@@ -246,6 +221,31 @@ RSpec.describe Granja do
                 expect(@dos.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
                 expect(@tres.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
                 expect(@cuatro.poblacion_reproduccion(24)).to eq("Hay 0 animales preparados para la reproducción.")
+            end
+        end
+
+
+
+        context "Haciendo que la clase Avicola funcione con el Enumerable de Array" do
+            it "Prueba maximo para Array" do
+                expect(@grupo.max).to eq(@tres)
+            end
+            it "Prueba minimo para Array" do
+                expect(@grupo.min).to eq(@uno)
+            end
+            it "Prueba sort para Array" do
+                grupo  = [@tres, @cuatro, @uno, @dos]
+                expect(grupo.sort).to eq([@uno, @dos, @tres, @cuatro])
+            end
+            it "Prueba detect para Array" do
+                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 1}).to eq(@uno)
+                expect(@grupo.detect {|p| p.ave == :patos && p.destino == :huevos && p.numero == 2}).to eq(@tres)
+                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 55}).to eq(nil)
+            end
+            it "Prueba find_all para Array" do
+                expect(@grupo.find_all {|p| p.destino == :huevos && p.numero >= 1}).to eq([@uno, @tres])
+                expect(@grupo.find_all {|p| p.numero <= 1}).to eq([@uno, @dos])
+                expect(@grupo.find_all {|p| p.ave == :pavos && p.destino == :huevos && p.numero >= 2000 }).to eq([])
             end
         end
     end
