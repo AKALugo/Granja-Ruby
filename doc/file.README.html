@@ -911,10 +911,239 @@ Failures:
 </code></pre>
 
 <h3 id="label-Cambio+en+las+expectativas+de+la+jerarqu-C3-ADa.">Cambio en las expectativas de la jerarquía.</h3>
+
+<h3 id="label-Herencia+de+la+clase+Avicola">Herencia de la clase Avicola</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Granja.html" title="Granja (module)">Granja</a></span></span>
+  <span class='const'>Avicola</span>
+    <span class='const'>Herencia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Avicola</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Avicola</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_granja'>granja</span> <span class='const'>Avicola</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Avicola</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='const'>Dato</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Avicola</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='lparen'>(</span><span class='const'>Object</span><span class='rparen'>)</span>
+      <span class='const'>Se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Avicola</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='id identifier rubyid_objeto'>objeto</span> <span class='id identifier rubyid_basico'>basico</span> <span class='lparen'>(</span><span class='const'>BasicObject</span><span class='rparen'>)</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Avicola</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='const'>Animal</span>
+      <span class='const'>No</span> <span class='id identifier rubyid_se'>se</span> <span class='id identifier rubyid_espera'>espera</span> <span class='id identifier rubyid_que'>que</span> <span class='id identifier rubyid_una'>una</span> <span class='id identifier rubyid_instancia'>instancia</span> <span class='id identifier rubyid_de'>de</span> <span class='id identifier rubyid_la'>la</span> <span class='id identifier rubyid_clase'>clase</span> <span class='const'>Avicola</span> <span class='id identifier rubyid_sea'>sea</span> <span class='id identifier rubyid_un'>un</span> <span class='const'>Ave</span>
+</code></pre>
+
+<h3 id="label-Error-3A+Atributos+de+la+clase+Avicola">Error: Atributos de la clase Avicola</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)
+     Failure/Error: expect(@uno.ave).to eq(:gansos)
+     
+     NoMethodError:
+       undefined method `ave&#39; for #&lt;Avicola:0x000055b4b59fa280&gt;
+     # ./spec/avicola_spec.rb:58:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  2) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el destino de los animales (huevos, sacrificio)
+     Failure/Error: expect(@uno.destino).to eq(:huevos)
+     
+     NoMethodError:
+       undefined method `destino&#39; for #&lt;Avicola:0x000055b4b59f8d18&gt;
+     # ./spec/avicola_spec.rb:64:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  3) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el numero de aves de la granja
+     Failure/Error: expect(@uno.numero).to eq(50)
+     
+     NoMethodError:
+       undefined method `numero&#39; for #&lt;Avicola:0x000055b4b5476840&gt;
+     # ./spec/avicola_spec.rb:70:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  4) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el precio unitario de los animales
+     Failure/Error: expect(@uno.precio_unidad).to eq(10,50)
+     
+     NoMethodError:
+       undefined method `precio_unidad&#39; for #&lt;Avicola:0x000055b4b5474658&gt;
+     # ./spec/avicola_spec.rb:76:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  5) Granja Avicola Atributos de la clase Avicola Tiene un atributo para el precio de venta unitario de los animales
+     Failure/Error: expect(@uno.precio_venta_u).to eq(42)
+     
+     NoMethodError:
+       undefined method `precio_venta_u&#39; for #&lt;Avicola:0x000055b4b59fee70&gt;
+     # ./spec/avicola_spec.rb:82:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  6) Granja Avicola Atributos de la clase Avicola Tiene un atributo para almacenar las aves de la granja
+     Failure/Error: expect(@uno.almacen_animal).not_to eq(nil)
+     
+     NoMethodError:
+       undefined method `almacen_animal&#39; for #&lt;Avicola:0x000055b4b59fd980&gt;
+     # ./spec/avicola_spec.rb:88:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Finished in 0.02071 seconds (files took 0.17713 seconds to load)
+69 examples, 6 failures
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Atributos+de+la+clase+Avicola">Arreglo: Atributos de la clase Avicola</h3>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Avicola
+    Atributos de la clase Avicola
+      Tiene una clase para almacenar los datos de la granja
+      Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)
+      Tiene un atributo para el destino de los animales (huevos, sacrificio)
+      Tiene un atributo para el numero de aves de la granja
+      Tiene un atributo para el precio unitario de los animales
+      Tiene un atributo para el precio de venta unitario de los animales
+      Tiene un atributo para almacenar las aves de la granja
+    Herencia de la clase Avicola
+      Se espera que una instancia de la clase Avicola sea una granja Avicola
+      Se espera que una instancia de la clase Avicola sea un Dato
+      Se espera que una instancia de la clase Avicola sea un objeto (Object)
+      Se espera que una instancia de la clase Avicola sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Avicola sea un Animal
+      No se espera que una instancia de la clase Avicola sea un Ave
+</code></pre>
+
+<h3 id="label-M-C3-A9todo+to_s+de+la+clase+Avicola">Método to_s de la clase Avicola</h3>
+
+<h3 id="label-Error-3A+Enumerable+clase+Avicola">Error: Enumerable clase Avicola</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Avicola Enumerable Prueba []
+     Failure/Error: expect(@uno[0]).to eq(:gansos)
+     
+     NoMethodError:
+       undefined method `[]&#39; for #&lt;Avicola:0x000055af7dc40950&gt;
+     # ./spec/avicola_spec.rb:110:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  2) Granja Avicola Enumerable Prueba maximo
+     Failure/Error: expect(@grupo.max).to eq(@cuatro)
+     
+     ArgumentError:
+       comparison of Avicola with Avicola failed
+     # ./spec/avicola_spec.rb:116:in `max&#39;
+     # ./spec/avicola_spec.rb:116:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  3) Granja Avicola Enumerable Prueba minimo
+     Failure/Error: expect(@grupo.min).to eq(@uno)
+     
+     ArgumentError:
+       comparison of Avicola with Avicola failed
+     # ./spec/avicola_spec.rb:119:in `min&#39;
+     # ./spec/avicola_spec.rb:119:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  4) Granja Avicola Enumerable Prueba sort
+     Failure/Error: expect(grupo.sort).to eq([@uno, @dos, @tres, @cuatro])
+     
+     ArgumentError:
+       comparison of Avicola with Avicola failed
+     # ./spec/avicola_spec.rb:123:in `sort&#39;
+     # ./spec/avicola_spec.rb:123:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  5) Granja Avicola Enumerable Prueba collect
+     Failure/Error: expect(@grupo.collect {|p| p * 10}).to eq(grupo)
+     
+     NoMethodError:
+       undefined method `*&#39; for #&lt;Avicola:0x000055af7dc37760&gt;
+     # ./spec/avicola_spec.rb:131:in `block (5 levels) in &lt;top (required)&gt;&#39;
+     # ./spec/avicola_spec.rb:131:in `collect&#39;
+     # ./spec/avicola_spec.rb:131:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Finished in 0.03275 seconds (files took 0.15957 seconds to load)
+78 examples, 5 failures
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Enumerable+clase+Avicola">Arreglo: Enumerable clase Avicola</h3>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Avicola
+    Atributos de la clase Avicola
+      Tiene una clase para almacenar los datos de la granja
+      Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)
+      Tiene un atributo para el destino de los animales (huevos, sacrificio)
+      Tiene un atributo para el numero de aves de la granja
+      Tiene un atributo para el precio unitario de los animales
+      Tiene un atributo para el precio de venta unitario de los animales
+      Tiene un atributo para almacenar las aves de la granja
+      Se obtiene una cadena con la informacion de la granja avicola correctamente formateada
+    Herencia de la clase Avicola
+      Se espera que una instancia de la clase Avicola sea una granja Avicola
+      Se espera que una instancia de la clase Avicola sea un Dato
+      Se espera que una instancia de la clase Avicola sea un objeto (Object)
+      Se espera que una instancia de la clase Avicola sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Avicola sea un Animal
+      No se espera que una instancia de la clase Avicola sea un Ave
+      No se espera que una instancia de la clase Avicola sea un Enumerable
+    Enumerable
+      Prueba []
+      Prueba maximo
+      Prueba minimo
+      Prueba sort
+      Prueba collect
+      Prueba detect
+      Prueba find_all
+</code></pre>
+
+<h3 id="label-Error-3A+Funcion+clase+Avicola">Error: Funcion clase Avicola</h3>
+
+<pre class="code ruby"><code class="ruby">Failures:
+
+  1) Granja Avicola Funciones Avicolas Gestion de puesta de huevos
+     Failure/Error: expect(@uno.puesta_huevos).to eq(:campo_abierto)
+     
+     NoMethodError:
+       undefined method `puesta_huevos&#39; for #&lt;Avicola:0x00005599040eca70&gt;
+     # ./spec/avicola_spec.rb:149:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  2) Granja Avicola Funciones Avicolas Uso de antibióticos
+     Failure/Error: expect(@uno.antibioticos).to eq(&quot;Se necesitan 100 antibióticos de forma semanal en la granja.&quot;)
+     
+     NoMethodError:
+       undefined method `antibioticos&#39; for #&lt;Avicola:0x00005599040f7b28&gt;
+     # ./spec/avicola_spec.rb:155:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+  3) Granja Avicola Funciones Avicolas Población reproductora
+     Failure/Error: expect(@uno.poblacion_reproduccion).to eq(&quot;Hay 3 animales preparados para la reproducción.&quot;)
+     
+     NoMethodError:
+       undefined method `poblacion_reproduccion&#39; for #&lt;Avicola:0x00005599040f66b0&gt;
+     # ./spec/avicola_spec.rb:166:in `block (4 levels) in &lt;top (required)&gt;&#39;
+
+Finished in 0.0283 seconds (files took 0.16139 seconds to load)
+81 examples, 3 failures
+</code></pre>
+
+<h3 id="label-Arreglo-3A+Funcion+clase+Avicola">Arreglo: Funcion clase Avicola</h3>
+
+<pre class="code ruby"><code class="ruby">Granja
+  Avicola
+    Atributos de la clase Avicola
+      Tiene una clase para almacenar los datos de la granja
+      Tiene un atributo para el tipo de aves (gansos, pollos, patos, pavos)
+      Tiene un atributo para el destino de los animales (huevos, sacrificio)
+      Tiene un atributo para el numero de aves de la granja
+      Tiene un atributo para el precio unitario de los animales
+      Tiene un atributo para el precio de venta unitario de los animales
+      Tiene un atributo para almacenar las aves de la granja
+      Se obtiene una cadena con la informacion de la granja avicola correctamente formateada
+    Herencia de la clase Avicola
+      Se espera que una instancia de la clase Avicola sea una granja Avicola
+      Se espera que una instancia de la clase Avicola sea un Dato
+      Se espera que una instancia de la clase Avicola sea un objeto (Object)
+      Se espera que una instancia de la clase Avicola sea un objeto basico (BasicObject)
+      No se espera que una instancia de la clase Avicola sea un Animal
+      No se espera que una instancia de la clase Avicola sea un Ave
+      No se espera que una instancia de la clase Avicola sea un Enumerable
+    Enumerable
+      Prueba []
+      Prueba maximo
+      Prueba minimo
+      Prueba sort
+      Prueba collect
+      Prueba detect
+      Prueba find_all
+    Funciones Avicolas
+      Gestion de puesta de huevos
+      Uso de antibióticos
+      Población reproductora
+</code></pre>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Dec 14 18:06:14 2021 by
+  Generated on Tue Dec 14 18:19:56 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.2).
 </div>
