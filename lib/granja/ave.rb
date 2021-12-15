@@ -55,5 +55,13 @@ module Granja
 
             Ave.new(@identificador, @edad, @sexo, @peso + other, @pico, @patas, @movilidad)
         end
+
+        def > other
+            if(other.instance_of? Ave)
+                @edad > other.edad
+            else
+                @edad > other
+            end
+        end
     end
 end

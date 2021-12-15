@@ -19,7 +19,7 @@ module Granja
 
           dias = valor * 30
           # Animales mayores a valor meses
-          array.select{|obj| obj.edad > dias}
+          array.select{|obj| obj > dias}
         end
     end
 end
