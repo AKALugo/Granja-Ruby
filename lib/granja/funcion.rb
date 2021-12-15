@@ -11,29 +11,15 @@ module Granja
         # Método para la función de cuidados
         def cuidados (cantidad, array)
           
-          # Animales menores al año
-          contador = 0
-          array.each do |elemento|
-              if elemento.edad <= 365
-                  contador = contador + 1
-              end
-          end
-
-          "Hay #{contador} animales que necesitan #{cantidad} ml de antibióticos de forma semanal"
+         array.collect{|obj| obj + cantidad}
         end
 
       # Método para la función reproductiva.
         def reproduccion (valor, array)
 
           dias = valor * 30
-          # Animales mayores a 24 meses
-          contador = 0
-          array.each do |elemento|
-              if elemento.edad > dias
-                  contador = contador + 1
-              end
-          end
-          "Hay #{contador} animales preparados para la reproducción."
+          # Animales mayores a valor meses
+          array.select{|obj| obj.edad > dias}
         end
     end
 end

@@ -226,6 +226,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#%2B-instance_method" title="#+ (instance method)">#<strong>+</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sustituye al + de comparable.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#<=>-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(other)  &#x21d2; Object </a>
     
 
@@ -264,7 +288,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Sustituye al == de comparable.</p>
+</div></span>
   
 </li>
 
@@ -559,7 +585,50 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="<=>-instance_method">
+  <h3 class="signature first" id="+-instance_method">
+  
+    #<strong>+</strong>(other)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sustituye al + de comparable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/granja/ave.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='op'>+</span> <span class='id identifier rubyid_other'>other</span>
+
+    <span class='const'><span class='object_link'><a href="" title="Granja::Ave (class)">Ave</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Granja::Ave#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@identificador</span><span class='comma'>,</span> <span class='ivar'>@edad</span><span class='comma'>,</span> <span class='ivar'>@sexo</span><span class='comma'>,</span> <span class='ivar'>@peso</span> <span class='op'>+</span> <span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='ivar'>@pico</span><span class='comma'>,</span> <span class='ivar'>@patas</span><span class='comma'>,</span> <span class='ivar'>@movilidad</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="<=>-instance_method">
   
     #<strong>&lt;=&gt;</strong>(other)  &#x21d2; <tt>Object</tt> 
   
@@ -610,18 +679,29 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sustituye al == de comparable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-48
 49
-50</pre>
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/granja/ave.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/granja/ave.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
     <span class='ivar'>@pico</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_pico'>pico</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@patas</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_patas'>patas</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@movilidad</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_movilidad'>movilidad</span>
@@ -692,7 +772,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 14 18:19:56 2021 by
+  Generated on Wed Dec 15 15:57:14 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.2).
 </div>

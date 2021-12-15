@@ -433,30 +433,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#antibioticos-instance_method" title="#antibioticos (instance method)">#<strong>antibioticos</strong>(valor)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Método que indica la cantidad de antibióticos que necesitan nuestros anumales.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|@numero| ... } &#x21d2; Object </a>
     
 
@@ -499,30 +475,6 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Método que inicializa las variables de instancia.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#poblacion_reproduccion-instance_method" title="#poblacion_reproduccion (instance method)">#<strong>poblacion_reproduccion</strong>(valor)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Método que indica la cantidad de animales listos para la reproducción.</p>
 </div></span>
   
 </li>
@@ -1225,49 +1177,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="antibioticos-instance_method">
-  
-    #<strong>antibioticos</strong>(valor)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Método que indica la cantidad de antibióticos que necesitan nuestros anumales.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-120
-121
-122
-123</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/granja/avicola.rb', line 120</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_antibioticos'>antibioticos</span> <span class='id identifier rubyid_valor'>valor</span>
-
-    <span class='id identifier rubyid_cuidados'>cuidados</span><span class='lparen'>(</span><span class='id identifier rubyid_valor'>valor</span><span class='comma'>,</span> <span class='ivar'>@almacen_animal</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
     #<strong>each</strong> {|@numero| ... } &#x21d2; <tt>Object</tt> 
@@ -1328,49 +1237,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="poblacion_reproduccion-instance_method">
-  
-    #<strong>poblacion_reproduccion</strong>(valor)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Método que indica la cantidad de animales listos para la reproducción.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-126
-127
-128
-129</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/granja/avicola.rb', line 126</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_poblacion_reproduccion'>poblacion_reproduccion</span> <span class='id identifier rubyid_valor'>valor</span>
-
-    <span class='id identifier rubyid_reproduccion'>reproduccion</span><span class='lparen'>(</span><span class='id identifier rubyid_valor'>valor</span><span class='comma'>,</span> <span class='ivar'>@almacen_animal</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="puesta_huevos-instance_method">
   
     #<strong>puesta_huevos</strong>  &#x21d2; <tt>Object</tt> 
@@ -1409,9 +1275,9 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puesta_huevos'>puesta_huevos</span>
     <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@ave</span> <span class='op'>==</span> <span class='symbol'>:pollos</span> <span class='op'>||</span> <span class='ivar'>@ave</span> <span class='op'>==</span> <span class='symbol'>:pavos</span><span class='rparen'>)</span>
-        <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Granja.html" title="Granja (module)">Granja</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Funcion.html" title="Granja::Funcion (module)">Funcion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Funcion.html#CONDICIONES_DE_VIDA_I-constant" title="Granja::Funcion::CONDICIONES_DE_VIDA_I (constant)">CONDICIONES_DE_VIDA_I</a></span></span>
+        <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Funcion.html#CONDICIONES_DE_VIDA_I-constant" title="Granja::Funcion::CONDICIONES_DE_VIDA_I (constant)">CONDICIONES_DE_VIDA_I</a></span></span>
     <span class='kw'>else</span>
-        <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Granja.html" title="Granja (module)">Granja</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Funcion.html" title="Granja::Funcion (module)">Funcion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Funcion.html#CONDICIONES_DE_VIDA_E-constant" title="Granja::Funcion::CONDICIONES_DE_VIDA_E (constant)">CONDICIONES_DE_VIDA_E</a></span></span>
+        <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Funcion.html#CONDICIONES_DE_VIDA_E-constant" title="Granja::Funcion::CONDICIONES_DE_VIDA_E (constant)">CONDICIONES_DE_VIDA_E</a></span></span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1469,7 +1335,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 14 18:19:56 2021 by
+  Generated on Wed Dec 15 15:57:14 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.2).
 </div>

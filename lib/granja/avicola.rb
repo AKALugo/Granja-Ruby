@@ -110,22 +110,10 @@ module Granja
         # Método que indica como se deben resguardar los animales.
         def puesta_huevos
             if (@ave == :pollos || @ave == :pavos)
-                return Granja::Funcion::CONDICIONES_DE_VIDA_I
+                return CONDICIONES_DE_VIDA_I
             else
-                return Granja::Funcion::CONDICIONES_DE_VIDA_E
+                return CONDICIONES_DE_VIDA_E
             end
-        end
-
-        # Método que indica la cantidad de antibióticos que necesitan nuestros anumales.
-        def antibioticos valor
-
-            cuidados(valor, @almacen_animal)
-        end
-
-        # Método que indica la cantidad de animales listos para la reproducción.
-        def poblacion_reproduccion valor
-        
-            reproduccion(valor, @almacen_animal)
         end
     end
 end

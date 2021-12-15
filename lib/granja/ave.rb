@@ -45,8 +45,15 @@ module Granja
             @edad <=> other.edad
         end
 
+        # Sustituye al == de comparable.
         def == other
             @pico == other.pico && @patas == other.patas && @movilidad == other.movilidad
+        end
+
+        # Sustituye al + de comparable.
+        def + other
+
+            Ave.new(@identificador, @edad, @sexo, @peso + other, @pico, @patas, @movilidad)
         end
     end
 end

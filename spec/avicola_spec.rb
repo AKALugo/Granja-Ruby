@@ -210,17 +210,17 @@ RSpec.describe Granja do
                 expect(@tres.puesta_huevos).to eq(:campo_abierto)
                 expect(@cuatro.puesta_huevos).to eq(:jaula)
             end
-            it "Uso de antibióticos" do
-                expect(@uno.antibioticos(500.5)).to eq("Hay 0 animales que necesitan 500.5 ml de antibióticos de forma semanal")
-                expect(@dos.antibioticos(500.5)).to eq("Hay 0 animales que necesitan 500.5 ml de antibióticos de forma semanal")
-                expect(@tres.antibioticos(500.5)).to eq("Hay 1 animales que necesitan 500.5 ml de antibióticos de forma semanal")
-                expect(@cuatro.antibioticos(500.5)).to eq("Hay 2 animales que necesitan 500.5 ml de antibióticos de forma semanal")
+            it "Uso de cuidados" do
+                expect(@uno.cuidados(10, @uno.almacen_animal)).to eq([@ganso1 + 10])
+                expect(@dos.cuidados(10, @dos.almacen_animal)).to eq([@pollo1 + 10])
+                expect(@tres.cuidados(10, @tres.almacen_animal)).to eq([@pato1 + 10, @pato2 + 10])
+                expect(@cuatro.cuidados(10, @cuatro.almacen_animal)).to eq([@pavo1 + 10, @pavo2 + 10])
             end
             it "Población reproductora" do
-                expect(@uno.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
-                expect(@dos.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
-                expect(@tres.poblacion_reproduccion(24)).to eq("Hay 1 animales preparados para la reproducción.")
-                expect(@cuatro.poblacion_reproduccion(24)).to eq("Hay 0 animales preparados para la reproducción.")
+                expect(@uno.reproduccion(24, @uno.almacen_animal)).to eq([@ganso1])
+                expect(@dos.reproduccion(24, @dos.almacen_animal)).to eq([@pollo1])
+                expect(@tres.reproduccion(24, @tres.almacen_animal)).to eq([@pato2])
+                expect(@cuatro.reproduccion(24, @cuatro.almacen_animal)).to eq([])
             end
         end
 
