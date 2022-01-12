@@ -10,10 +10,10 @@ RSpec.describe Granja do
             @pavo1  = Granja::Ave.new(1, 301, :hembra, 888.8, :corto, :palmeadas, :corredoras)
             @pavo2  = Granja::Ave.new(2, 100, :hembra, 888.8, :corto, :palmeadas, :corredoras)
 
-            @uno    = Granja::Avicola.new(1, "Granja Gansos", "Gansos de calidad", :gansos, :huevos, 1, 10.50, 42, [@ganso1])
+            @uno    = Granja::Avicola.new(1, "Granja Gansos", "Gansos de calidad", :gansos, :huevos, 1, 10.50, 500, [@ganso1])
             @dos    = Granja::Avicola.new(2, "Granja Pollos", "Pollos de calidad", :pollos, :sacrificio, 1, 21, 31.50, [@pollo1])
             @tres   = Granja::Avicola.new(3, "Granja Patos", "Patos de calidad", :patos, :huevos, 2, 31.50, 21, [@pato1, @pato2])
-            @cuatro = Granja::Avicola.new(4, "Granja Pavos", "Pavos de calidad", :pavos, :sacrificio, 2, 42, 10.50, [@pavo1, @pavo2])
+            @cuatro = Granja::Avicola.new(4, "Granja Pavos", "Pavos de calidad", :pavos, :sacrificio, 2, 500, 10.50, [@pavo1, @pavo2])
             @cooperativa  = [@uno, @dos, @tres, @cuatro]
         end
 
@@ -45,10 +45,10 @@ RSpec.describe Granja do
                 expect(@uno.precio_unidad).to eq(10.50)
                 expect(@dos.precio_unidad).to eq(21)
                 expect(@tres.precio_unidad).to eq(31.50)
-                expect(@cuatro.precio_unidad).to eq(42)
+                expect(@cuatro.precio_unidad).to eq(500)
             end
             it "Tiene un atributo para el precio de venta unitario de los animales" do
-                expect(@uno.precio_venta_u).to eq(42)
+                expect(@uno.precio_venta_u).to eq(500)
                 expect(@dos.precio_venta_u).to eq(31.50)
                 expect(@tres.precio_venta_u).to eq(21)
                 expect(@cuatro.precio_venta_u).to eq(10.50)
@@ -60,10 +60,10 @@ RSpec.describe Granja do
                 expect(@cuatro.almacen_animal).not_to eq(nil)
             end
             it "Se obtiene una cadena con la informacion de la granja avicola correctamente formateada" do
-                expect(@uno.to_s).to eq("La granja Avicola tiene como aves a los gansos, el destino de estas aves es huevos, en la granja hay 1 de aves, su precio por unidad es 10.5 y el precio de venta por unidad es 42")
+                expect(@uno.to_s).to eq("La granja Avicola tiene como aves a los gansos, el destino de estas aves es huevos, en la granja hay 1 de aves, su precio por unidad es 10.5 y el precio de venta por unidad es 500")
                 expect(@dos.to_s).to eq("La granja Avicola tiene como aves a los pollos, el destino de estas aves es sacrificio, en la granja hay 1 de aves, su precio por unidad es 21 y el precio de venta por unidad es 31.5")
                 expect(@tres.to_s).to eq("La granja Avicola tiene como aves a los patos, el destino de estas aves es huevos, en la granja hay 2 de aves, su precio por unidad es 31.5 y el precio de venta por unidad es 21")
-                expect(@cuatro.to_s).to eq("La granja Avicola tiene como aves a los pavos, el destino de estas aves es sacrificio, en la granja hay 2 de aves, su precio por unidad es 42 y el precio de venta por unidad es 10.5")
+                expect(@cuatro.to_s).to eq("La granja Avicola tiene como aves a los pavos, el destino de estas aves es sacrificio, en la granja hay 2 de aves, su precio por unidad es 500 y el precio de venta por unidad es 10.5")
             end
         end
 
@@ -134,16 +134,16 @@ RSpec.describe Granja do
                 expect(@vacio.any?).to eq(false)
               end
               it "comprobrando el metodo collect" do
-                expect(@uno.collect{|obj| obj}).to eq([1, 10.50, 42])
+                expect(@uno.collect{|obj| obj}).to eq([1, 10.50, 500])
                 expect(@dos.collect{|obj| obj}).to eq([1, 21, 31.50])
                 expect(@tres.collect{|obj| obj}).to eq([2, 31.50, 21])
-                expect(@cuatro.collect{|obj| obj}).to eq([2, 42, 10.50])
+                expect(@cuatro.collect{|obj| obj}).to eq([2, 500, 10.50])
               end
               it "comprobrando el metodo map" do
-                expect(@uno.map{|obj| obj}).to eq([1, 10.50, 42])
+                expect(@uno.map{|obj| obj}).to eq([1, 10.50, 500])
                 expect(@dos.map{|obj| obj}).to eq([1, 21, 31.50])
                 expect(@tres.map{|obj| obj}).to eq([2, 31.50, 21])
-                expect(@cuatro.map{|obj| obj}).to eq([2, 42, 10.50])
+                expect(@cuatro.map{|obj| obj}).to eq([2, 500, 10.50])
               end
               it "comprobrando el metodo count" do
                 expect(@uno.count).to eq(3)
@@ -164,22 +164,22 @@ RSpec.describe Granja do
                 expect(@cuatro.detect {|i| i == 10.50}).to eq(10.50)
               end
               it "comprobrando el metodo drop" do
-                expect(@uno.drop(0)).to eq([1, 10.50, 42])
+                expect(@uno.drop(0)).to eq([1, 10.50, 500])
                 expect(@dos.drop(1)).to eq([21, 31.50])
                 expect(@tres.drop(2)).to eq([21])
-                expect(@cuatro.drop(1)).to eq([42, 10.50])
+                expect(@cuatro.drop(1)).to eq([500, 10.50])
               end
               it "comprobrando el metodo drop_while" do
-                expect(@uno.drop_while{|obj| obj != 1}).to eq([1, 10.50, 42])
+                expect(@uno.drop_while{|obj| obj != 1}).to eq([1, 10.50, 500])
                 expect(@dos.drop_while{|obj| obj != 31.50}).to eq([31.50])
                 expect(@tres.drop_while{|obj| obj != 31.50}).to eq([31.50, 21])
-                expect(@cuatro.drop_while{|obj| obj != 2}).to eq([2, 42, 10.50])
+                expect(@cuatro.drop_while{|obj| obj != 2}).to eq([2, 500, 10.50])
               end
               it "comprobrando el metodo max" do
-                expect(@uno.max).to eq(42)
+                expect(@uno.max).to eq(500)
                 expect(@dos.max).to eq(31.50)
                 expect(@tres.max).to eq(31.50)
-                expect(@cuatro.max).to eq(42)
+                expect(@cuatro.max).to eq(500)
               end
               it "comprobrando el metodo min" do
                 expect(@uno.min).to eq(1)
@@ -188,10 +188,10 @@ RSpec.describe Granja do
                 expect(@cuatro.min).to eq(2)
               end
               it "comprobrando el metodo sort" do
-                expect(@uno.sort).to eq([1, 10.50, 42])
+                expect(@uno.sort).to eq([1, 10.50, 500])
                 expect(@dos.sort).to eq([1, 21, 31.50])
                 expect(@tres.sort).to eq([2, 21, 31.50])
-                expect(@cuatro.sort).to eq([2, 10.50, 42])
+                expect(@cuatro.sort).to eq([2, 10.50, 500])
               end
         end
 
@@ -229,16 +229,16 @@ RSpec.describe Granja do
                 expect(@cuatro.bienestar_animal(@cuatro, @cuatro.puesta_huevos)).to eq(34)
             end
             it "Beneficio neto" do
-                expect(@uno.beneficio_neto(@uno)).to eq(2300)
-                expect(@dos.beneficio_neto(@dos)).to eq(635.56)
-                expect(@tres.beneficio_neto(@tres)).to eq(4300)
-                expect(@cuatro.beneficio_neto(@cuatro)).to eq(8464.76)
+                expect(@uno.beneficio_neto(@uno)).to eq(50.05)
+                expect(@dos.beneficio_neto(@dos)).to eq(15.73)
+                expect(@tres.beneficio_neto(@tres)).to eq(2.32)
+                expect(@cuatro.beneficio_neto(@cuatro)).to eq(1.18)
             end
             it "Indice productividad" do
                 expect(@uno.indicador_productividad(@uno, @uno.puesta_huevos)).to eq(2)
                 expect(@dos.indicador_productividad(@dos, @dos.puesta_huevos)).to eq(2)
-                expect(@tres.indicador_productividad(@tres, @tres.puesta_huevos)).to eq(2)
-                expect(@cuatro.indicador_productividad(@cuatro, @cuatro.puesta_huevos)).to eq(2)
+                expect(@tres.indicador_productividad(@tres, @tres.puesta_huevos)).to eq(1)
+                expect(@cuatro.indicador_productividad(@cuatro, @cuatro.puesta_huevos)).to eq(1)
             end
         end
 
@@ -250,18 +250,18 @@ RSpec.describe Granja do
                 expect(@cooperativa.max_by{|x| x.indicador_productividad(x, x.puesta_huevos)}).to eq(@uno)
             end
             it "Prueba incrementar precio" do
-                p_uno    = @uno.aumentar_precio_venta(@uno.precio_venta_u/10)
-                p_dos    = @dos.aumentar_precio_venta(@uno.precio_venta_u/10)
-                p_tres   = @tres.aumentar_precio_venta(@uno.precio_venta_u/10)
-                p_cuatro = @cuatro.aumentar_precio_venta(@uno.precio_venta_u/10)
+                p_uno    = @uno.aumentar_precio_venta((@uno.precio_venta_u/10).ceil)
+                p_dos    = @dos.aumentar_precio_venta((@uno.precio_venta_u/10).ceil)
+                p_tres   = @tres.aumentar_precio_venta((@uno.precio_venta_u/10).ceil)
+                p_cuatro = @cuatro.aumentar_precio_venta((@uno.precio_venta_u/10).ceil)
                 p_cooperativa  = [p_uno, p_dos, p_tres, p_cuatro]
 
                 maxi = @cooperativa.max_by{|x| x.indicador_productividad(x, x.puesta_huevos)}
                 # Forma 1: Comparamos un array que contiene el precio de venta.
-                expect(@cooperativa.collect{|x| x.aumentar_precio_venta(maxi.precio_venta_u/10)}.collect{|x| x.precio_venta_u}).to eq(p_cooperativa.collect{|x| x.precio_venta_u})
+                expect(@cooperativa.collect{|x| x.aumentar_precio_venta((maxi.precio_venta_u/10).ceil)}.collect{|x| x.precio_venta_u}).to eq(p_cooperativa.collect{|x| x.precio_venta_u})
                 
                 # Forma 2: Comparamos las cooperativas.
-                expect(@cooperativa.collect{|x| x.aumentar_precio_venta(maxi.precio_venta_u/10)}).to eq(p_cooperativa)
+                expect(@cooperativa.collect{|x| x.aumentar_precio_venta((maxi.precio_venta_u/10).ceil)}).to eq(p_cooperativa)
             end
 
             it "Prueba máximo para Array" do

@@ -28,7 +28,7 @@ module Granja
           if condiciones == CONDICIONES_DE_VIDA_CABALLO
             return 100
           else
-            return ((granja.almacen_animal.sum{|x| x.peso/x.edad} / granja.numero * 100) / (granja.almacen_animal.collect{|x| x.peso / x.edad}.max * 2)).ceil
+            return (((granja.almacen_animal.sum{|x| x.peso/x.edad} / granja.numero.to_f * 100) / (granja.almacen_animal.collect{|x| x.peso / x.edad}.max) * 0.5)).ceil
           end
         end
 
@@ -37,10 +37,11 @@ module Granja
           
           if granja.destino == :sacrificio
             
-            return (((granja.almacen_animal.sum{|x| x.peso} / granja.numero) / granja.precio_venta_u) * 100).round(2)
+            
+            return ((granja.precio_venta_u / (granja.almacen_animal.sum{|x| x.peso} / granja.numero.to_f)) * 100).round(2)
           else
 
-            return (((granja.almacen_animal.sum{|x| x.edad} / granja.numero) / granja.precio_venta_u) * 100).round(2)
+            return ((granja.precio_venta_u / (granja.almacen_animal.sum{|x| x.edad} / granja.numero.to_f)) * 100).round(2)
           end
         end
 
