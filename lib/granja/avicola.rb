@@ -31,6 +31,12 @@ module Granja
             @almacen_animal = almacen_animal
         end
 
+        # Aumentamos el precio de venta y devolvemos un nuevo objeto.
+        def aumentar_precio_venta (value)
+
+            Avicola.new(@identificacion, @nombre, @descripcion, @ave, @destino, @numero, @precio_unidad, @precio_venta_u * value, @almacen_animal)
+        end
+
         # Método para añadir animales a nuestra granja sin romper el encapsulamiento.
         def add_animal other
 
@@ -58,7 +64,7 @@ module Granja
         # Necesario para .collect en []
         def * value
 
-            Avicola.new(@ave, @destino, @numero * value, @precio_unidad, @precio_venta_u)
+            Avicola.new(@identificacion, @nombre * value, @descripcion, @ave, @destino, @numero, @precio_unidad, @precio_venta_u, @almacen_animal)
         end
 
         # Da problemas con .collect en  []

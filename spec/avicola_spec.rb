@@ -14,7 +14,7 @@ RSpec.describe Granja do
             @dos    = Granja::Avicola.new(2, "Granja Pollos", "Pollos de calidad", :pollos, :sacrificio, 1, 21, 31.50, [@pollo1])
             @tres   = Granja::Avicola.new(3, "Granja Patos", "Patos de calidad", :patos, :huevos, 2, 31.50, 21, [@pato1, @pato2])
             @cuatro = Granja::Avicola.new(4, "Granja Pavos", "Pavos de calidad", :pavos, :sacrificio, 2, 42, 10.50, [@pavo1, @pavo2])
-            @grupo  = [@uno, @dos, @tres, @cuatro]
+            @cooperativa  = [@uno, @dos, @tres, @cuatro]
         end
 
 
@@ -222,30 +222,67 @@ RSpec.describe Granja do
                 expect(@tres.reproduccion(24, @tres.almacen_animal)).to eq([@pato2])
                 expect(@cuatro.reproduccion(24, @cuatro.almacen_animal)).to eq([])
             end
+            it "Bienestar animal" do
+                expect(@uno.bienestar_animal(@uno, @uno.puesta_huevos)).to eq(50)
+                expect(@dos.bienestar_animal(@dos, @dos.puesta_huevos)).to eq(50)
+                expect(@tres.bienestar_animal(@tres, @tres.puesta_huevos)).to eq(29)
+                expect(@cuatro.bienestar_animal(@cuatro, @cuatro.puesta_huevos)).to eq(34)
+            end
+            it "Beneficio neto" do
+                expect(@uno.beneficio_neto(@uno)).to eq(2300)
+                expect(@dos.beneficio_neto(@dos)).to eq(635.56)
+                expect(@tres.beneficio_neto(@tres)).to eq(4300)
+                expect(@cuatro.beneficio_neto(@cuatro)).to eq(8464.76)
+            end
+            it "Indice productividad" do
+                expect(@uno.indicador_productividad(@uno, @uno.puesta_huevos)).to eq(2)
+                expect(@dos.indicador_productividad(@dos, @dos.puesta_huevos)).to eq(2)
+                expect(@tres.indicador_productividad(@tres, @tres.puesta_huevos)).to eq(2)
+                expect(@cuatro.indicador_productividad(@cuatro, @cuatro.puesta_huevos)).to eq(2)
+            end
         end
 
 
 
         context "Haciendo que la clase Avicola funcione con el Enumerable de Array" do
-            it "Prueba maximo para Array" do
-                expect(@grupo.max).to eq(@tres)
+            it "Prueba maximo indicador de la productividad para Array de Granjas" do
+                expect(@cooperativa.max{|x, y| x.indicador_productividad(x, x.puesta_huevos) <=> y.indicador_productividad(y, y.puesta_huevos)}).to eq(@uno)
+                expect(@cooperativa.max_by{|x| x.indicador_productividad(x, x.puesta_huevos)}).to eq(@uno)
+            end
+            it "Prueba incrementar precio" do
+                p_uno    = @uno.aumentar_precio_venta(@uno.precio_venta_u/10)
+                p_dos    = @dos.aumentar_precio_venta(@uno.precio_venta_u/10)
+                p_tres   = @tres.aumentar_precio_venta(@uno.precio_venta_u/10)
+                p_cuatro = @cuatro.aumentar_precio_venta(@uno.precio_venta_u/10)
+                p_cooperativa  = [p_uno, p_dos, p_tres, p_cuatro]
+
+                maxi = @cooperativa.max_by{|x| x.indicador_productividad(x, x.puesta_huevos)}
+                # Forma 1: Comparamos un array que contiene el precio de venta.
+                expect(@cooperativa.collect{|x| x.aumentar_precio_venta(maxi.precio_venta_u/10)}.collect{|x| x.precio_venta_u}).to eq(p_cooperativa.collect{|x| x.precio_venta_u})
+                
+                # Forma 2: Comparamos las cooperativas.
+                expect(@cooperativa.collect{|x| x.aumentar_precio_venta(maxi.precio_venta_u/10)}).to eq(p_cooperativa)
+            end
+
+            it "Prueba máximo para Array" do
+                expect(@cooperativa.max).to eq(@tres)
             end
             it "Prueba minimo para Array" do
-                expect(@grupo.min).to eq(@uno)
+                expect(@cooperativa.min).to eq(@uno)
             end
             it "Prueba sort para Array" do
-                grupo  = [@tres, @cuatro, @uno, @dos]
-                expect(grupo.sort).to eq([@uno, @dos, @tres, @cuatro])
+                cooperativa  = [@tres, @cuatro, @uno, @dos]
+                expect(cooperativa.sort).to eq([@uno, @dos, @tres, @cuatro])
             end
             it "Prueba detect para Array" do
-                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 1}).to eq(@uno)
-                expect(@grupo.detect {|p| p.ave == :patos && p.destino == :huevos && p.numero == 2}).to eq(@tres)
-                expect(@grupo.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 55}).to eq(nil)
+                expect(@cooperativa.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 1}).to eq(@uno)
+                expect(@cooperativa.detect {|p| p.ave == :patos && p.destino == :huevos && p.numero == 2}).to eq(@tres)
+                expect(@cooperativa.detect {|p| p.ave == :gansos && p.destino == :huevos && p.numero == 55}).to eq(nil)
             end
             it "Prueba find_all para Array" do
-                expect(@grupo.find_all {|p| p.destino == :huevos && p.numero >= 1}).to eq([@uno, @tres])
-                expect(@grupo.find_all {|p| p.numero <= 1}).to eq([@uno, @dos])
-                expect(@grupo.find_all {|p| p.ave == :pavos && p.destino == :huevos && p.numero >= 2000 }).to eq([])
+                expect(@cooperativa.find_all {|p| p.destino == :huevos && p.numero >= 1}).to eq([@uno, @tres])
+                expect(@cooperativa.find_all {|p| p.numero <= 1}).to eq([@uno, @dos])
+                expect(@cooperativa.find_all {|p| p.ave == :pavos && p.destino == :huevos && p.numero >= 2000 }).to eq([])
             end
         end
     end
