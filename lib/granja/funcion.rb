@@ -37,7 +37,6 @@ module Granja
           
           if granja.destino == :sacrificio
             
-            
             return ((granja.precio_venta_u / (granja.almacen_animal.sum{|x| x.peso} / granja.numero.to_f)) * 100).round(2)
           else
 
