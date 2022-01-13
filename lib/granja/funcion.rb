@@ -25,10 +25,13 @@ module Granja
         # Método para calcular el bienestar animal.
         def bienestar_animal granja, condiciones
 
+          max = granja.almacen_animal.collect{|x| x.peso / x.edad}.max
+          ratio = (granja.almacen_animal.sum{|x| x.peso/x.edad} / granja.numero.to_f)
+
           if condiciones == CONDICIONES_DE_VIDA_CABALLO
-            return 100
+            return ((ratio * 100) / max).ceil
           else
-            return (((granja.almacen_animal.sum{|x| x.peso/x.edad} / granja.numero.to_f) * 100) / (granja.almacen_animal.collect{|x| x.peso / x.edad}.max * 2)).ceil
+            return ((ratio * 50) / max).ceil
           end
         end
 
@@ -37,10 +40,9 @@ module Granja
           
           if granja.destino == :sacrificio
             
-            return ((granja.precio_venta_u / (granja.almacen_animal.sum{|x| x.peso} / granja.numero.to_f)) * 100).round(2)
+            return (((granja.precio_venta_u - granja.precio_unidad) / (granja.almacen_animal.sum{|x| x.peso} / granja.numero.to_f)) * 100).round(2)
           else
-
-            return ((granja.precio_venta_u / (granja.almacen_animal.sum{|x| x.edad} / granja.numero.to_f)) * 100).round(2)
+            return (((granja.precio_venta_u - granja.precio_unidad)/ (granja.almacen_animal.sum{|x| x.edad} / granja.numero.to_f)) * 100).round(2)
           end
         end
 
