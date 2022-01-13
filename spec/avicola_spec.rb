@@ -257,11 +257,9 @@ RSpec.describe Granja do
                 p_cooperativa  = [p_uno, p_dos, p_tres, p_cuatro]
 
                 maxi = @cooperativa.max_by{|x| x.indicador_productividad(x, x.puesta_huevos)}
-                # Forma 1: Comparamos un array que contiene el precio de venta.
+                # Comparamos un array que contiene el precio de venta.
                 expect(@cooperativa.collect{|x| x.aumentar_precio_venta((maxi.precio_venta_u/10).ceil)}.collect{|x| x.precio_venta_u}).to eq(p_cooperativa.collect{|x| x.precio_venta_u})
-                
-                # Forma 2: Comparamos las cooperativas.
-                expect(@cooperativa.collect{|x| x.aumentar_precio_venta((maxi.precio_venta_u/10).ceil)}).to eq(p_cooperativa)
+
             end
 
             it "Prueba máximo para Array" do
