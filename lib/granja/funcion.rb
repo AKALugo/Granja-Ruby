@@ -26,7 +26,7 @@ module Granja
         def bienestar_animal granja, condiciones
 
           max = granja.almacen_animal.collect{|x| x.peso / x.edad}.max
-          ratio = (granja.almacen_animal.sum{|x| x.peso/x.edad} / granja.numero.to_f)
+          ratio = (granja.almacen_animal.sum{|x| x.peso / x.edad} / granja.numero.to_f)
 
           if condiciones == CONDICIONES_DE_VIDA_CABALLO
             return ((ratio * 100) / max).ceil
@@ -75,7 +75,6 @@ module Granja
           else
             return 2
           end
-
         end
 
     end

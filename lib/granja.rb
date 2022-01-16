@@ -6,6 +6,8 @@ require "granja/animal"
 require "granja/ave"
 require "granja/funcion"
 require "granja/avicola"
+require "granja/dslgranja"
+require "granja/dslfuncion"
 
 module Granja
   

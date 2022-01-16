@@ -248,7 +248,7 @@ RSpec.describe Granja do
             it "Prueba maximo indicador de la productividad para Array de Granjas" do
                 condiciones = [Granja::Funcion::CONDICIONES_DE_VIDA_E, Granja::Funcion::CONDICIONES_DE_VIDA_I, Granja::Funcion::CONDICIONES_DE_VIDA_CABALLO]
                 combo = @cooperativa.zip(condiciones)
-                expect(combo.max_by{|x| x[0].indicador_productividad(x[0], x[1])}).to eq([@uno, Granja::Funcion::CONDICIONES_DE_VIDA_E])
+                expect(combo.max_by{|x, y| x.indicador_productividad(x, y)}).to eq([@uno, Granja::Funcion::CONDICIONES_DE_VIDA_E])
             end
             it "Prueba incrementar precio" do
                 p_uno    = @uno.aumentar_precio_venta((@uno.precio_venta_u/10).ceil)
@@ -259,7 +259,7 @@ RSpec.describe Granja do
 
                 condiciones = [Granja::Funcion::CONDICIONES_DE_VIDA_E, Granja::Funcion::CONDICIONES_DE_VIDA_I, Granja::Funcion::CONDICIONES_DE_VIDA_CABALLO]
                 combo = @cooperativa.zip(condiciones)
-                maxi = combo.max_by{|x| x[0].indicador_productividad(x[0], x[1])}
+                maxi = combo.max_by{|x, y| x.indicador_productividad(x, y)}
 
                 # Comparamos un array que contiene el precio de venta.
                 expect(@cooperativa.collect{|x| x.aumentar_precio_venta((maxi[0].precio_venta_u / 10).ceil)}.collect{|x| x.precio_venta_u}).to eq(p_cooperativa.collect{|x| x.precio_venta_u})
