@@ -1,4 +1,6 @@
 module Granja
+
+    # Constructor.
     class DSLGranja
 
         attr_reader :dato, :ejemplares
@@ -16,6 +18,7 @@ module Granja
             end
         end
 
+        # Convertir a String
         def to_s
             output = "DSLGranja:\n"
             output << "La granja #{@dato[0]} de nombre #{@dato[1]}, cuya descripcion es #{@dato[2]} y su animal es #{@dato[3]}\n\n"
@@ -28,12 +31,14 @@ module Granja
             output
         end
 
+        # Creamos los datos.
         def datos nombre, opcion = {}
             @dato << nombre
             @dato << opcion[:descripcion] if opcion[:descripcion]
             @dato << opcion[:tipo] if opcion[:tipo]
         end
 
+        # Creamos los ejemplares.
         def ejemplar identificacion, opcion = {}
             ejemplar = []
             ejemplar << identificacion
