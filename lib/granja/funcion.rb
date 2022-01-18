@@ -4,7 +4,7 @@ module Granja
   module Funcion
 
   # Constantes.
-  CONDICIONES_DE_VIDA_E = :campo_abierto
+  CONDICIONES_DE_VIDA_E = :campo
   CONDICIONES_DE_VIDA_I = :jaula
   CONDICIONES_DE_VIDA_CABALLO = :establo
 
@@ -26,9 +26,9 @@ module Granja
         def bienestar_animal granja, condiciones
 
           max = granja.almacen_animal.collect{|x| x.peso / x.edad}.max
-          ratio = (granja.almacen_animal.sum{|x| x.peso / x.edad} / granja.numero.to_f)
+          ratio = granja.almacen_animal.sum{|x| x.peso / x.edad} / granja.numero.to_f
 
-          if condiciones == CONDICIONES_DE_VIDA_CABALLO
+          if condiciones == CONDICIONES_DE_VIDA_E
             return ((ratio * 100) / max).ceil
           else
             return ((ratio * 50) / max).ceil

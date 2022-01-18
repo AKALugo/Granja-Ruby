@@ -205,9 +205,9 @@ RSpec.describe Granja do
                 expect(@cuatro[-4]).to eq(2)
             end
             it "Gestion de puesta de huevos" do
-                expect(@uno.puesta_huevos).to eq(:campo_abierto)
+                expect(@uno.puesta_huevos).to eq(:campo)
                 expect(@dos.puesta_huevos).to eq(:jaula)
-                expect(@tres.puesta_huevos).to eq(:campo_abierto)
+                expect(@tres.puesta_huevos).to eq(:campo)
                 expect(@cuatro.puesta_huevos).to eq(:jaula)
             end
             it "Uso de cuidados" do
@@ -223,9 +223,9 @@ RSpec.describe Granja do
                 expect(@cuatro.reproduccion(24, @cuatro.almacen_animal)).to eq([])
             end
             it "Bienestar animal" do
-                expect(@uno.bienestar_animal(@uno, Granja::Funcion::CONDICIONES_DE_VIDA_E)).to eq(50)
+                expect(@uno.bienestar_animal(@uno, Granja::Funcion::CONDICIONES_DE_VIDA_E)).to eq(100)
                 expect(@dos.bienestar_animal(@dos, Granja::Funcion::CONDICIONES_DE_VIDA_I)).to eq(50)
-                expect(@tres.bienestar_animal(@tres, Granja::Funcion::CONDICIONES_DE_VIDA_E)).to eq(29)
+                expect(@tres.bienestar_animal(@tres, Granja::Funcion::CONDICIONES_DE_VIDA_E)).to eq(57)
                 expect(@cuatro.bienestar_animal(@cuatro, Granja::Funcion::CONDICIONES_DE_VIDA_I)).to eq(34)
             end
             it "Beneficio neto" do
@@ -265,7 +265,6 @@ RSpec.describe Granja do
                 expect(@cooperativa.collect{|x| x.aumentar_precio_venta((maxi[0].precio_venta_u / 10).ceil)}.collect{|x| x.precio_venta_u}).to eq(p_cooperativa.collect{|x| x.precio_venta_u})
 
             end
-
             it "Prueba máximo para Array" do
                 expect(@cooperativa.max).to eq(@tres)
             end
